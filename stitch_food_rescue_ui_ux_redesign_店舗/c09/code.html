@@ -1,0 +1,653 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Food Rescue - 食品ロス削減システム</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-container":"#f5fff7","tertiary-fixed":"#6ffbbe","secondary-container":"#fd761a","primary-fixed-dim":"#68dba9","on-surface-variant":"#3d4a42","inverse-on-surface":"#ecf1ff","outline-variant":"#bccac0","surface-container":"#e7eeff","primary":"#006948","on-surface":"#111c2d","on-tertiary-fixed-variant":"#005236","surface":"#f9f9ff","tertiary-fixed-dim":"#4edea3","on-primary-fixed-variant":"#005137","surface-tint":"#006c4a","surface-dim":"#cfdaf2","secondary":"#9d4300","surface-container-lowest":"#ffffff","on-primary-fixed":"#002114","surface-container-low":"#f0f3ff","on-secondary-fixed-variant":"#783200","surface-container-high":"#dee8ff","on-secondary-container":"#5c2400","secondary-fixed":"#ffdbca","background":"#f9f9ff","on-error-container":"#93000a","on-secondary-fixed":"#341100","on-primary":"#ffffff","on-secondary":"#ffffff","error-container":"#ffdad6","on-tertiary-container":"#f5fff6","tertiary":"#006947","outline":"#6d7a72","on-tertiary-fixed":"#002113","primary-container":"#00855d","surface-variant":"#d8e3fb","on-tertiary":"#ffffff","surface-bright":"#f9f9ff","surface-container-highest":"#d8e3fb","inverse-surface":"#263143","tertiary-container":"#00855b","primary-fixed":"#85f8c4","secondary-fixed-dim":"#ffb690","inverse-primary":"#68dba9","on-error":"#ffffff","error":"#ba1a1a","on-background":"#111c2d"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-mobile":"1rem","space-xs":"0.25rem","space-sm":"0.5rem",gutter:"1rem","gutter-mobile":"0.75rem",margin:"1.5rem","space-lg":"1.5rem","space-xl":"2.5rem","space-md":"1rem"},fontFamily:{"body-md":["Noto Sans"],"label-numeric-md":["Inter"],"label-numeric-lg":["Inter"],"headline-lg":["Noto Sans"],"headline-xl-mobile":["Noto Sans"],"body-sm":["Noto Sans"],"headline-xl":["Noto Sans"],"body-lg":["Noto Sans"],"label-caption":["Noto Sans"],"headline-md":["Noto Sans"],"label-badge":["Noto Sans"],"headline-lg-mobile":["Noto Sans"]},fontSize:{"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-numeric-md":["16px",{lineHeight:"20px",fontWeight:"700"}],"label-numeric-lg":["22px",{lineHeight:"28px",fontWeight:"700"}],"headline-lg":["24px",{lineHeight:"32px",fontWeight:"700"}],"headline-xl-mobile":["26px",{lineHeight:"34px",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"headline-xl":["32px",{lineHeight:"40px",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"500"}],"label-caption":["10px",{lineHeight:"14px",fontWeight:"500"}],"headline-md":["18px",{lineHeight:"26px",fontWeight:"700"}],"label-badge":["11px",{lineHeight:"14px",fontWeight:"700"}],"headline-lg-mobile":["20px",{lineHeight:"28px",fontWeight:"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-xs" data-path="c01-home" href="#"><div class="w-9 h-9 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[22px]">eco</span></div><span class="font-headline-md text-headline-md text-primary tracking-tight font-bold">Food Rescue</span></a><button class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface transition-colors cursor-pointer" type="button"><span class="material-symbols-outlined text-[18px] text-primary">storefront</span><span class="font-body-sm text-body-sm font-medium">ライフ 渋谷桜丘店</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></button></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg"><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="c01-home" href="#">ホーム</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="c02-search-products" href="#">食材を探す</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="c04-ai-recipes" href="#">AIレシピ</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="c07-my-coupons" href="#">マイクーポン</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="c09-my-page" href="#">マイページ</a></nav><div class="flex items-center gap-space-sm"><a class="hidden md:inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors font-body-sm text-body-sm" data-path="store-admin-dashboard" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">badge</span><span>店舗管理システムへ (スタッフ用)</span></a><a class="w-9 h-9 rounded-full bg-surface-container-high hover:bg-surface-variant flex items-center justify-center text-on-surface transition-colors cursor-pointer" data-path="c09-my-page" href="#"><span class="material-symbols-outlined text-[20px]">account_circle</span></a></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-48 -right-32 w-80 h-80 bg-secondary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-lg space-y-space-lg relative">
+<!-- Breadcrumb / Context Marker -->
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" data-path="c01-home" href="#">ホーム</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-medium">マイページ</span>
+</div>
+<!-- 1. Profile Header Hero Card (No borders, tonal contrast & layered depth) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- User Profile Details -->
+<div class="flex items-start sm:items-center gap-space-md">
+<div class="relative flex-shrink-0">
+<div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-primary-container p-1 shadow-md flex items-center justify-center">
+<div class="w-full h-full rounded-full bg-surface-container-lowest flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Warm natural portrait photograph of Yui Sato, a smiling Japanese woman in her late 20s wearing a clean organic beige linen cardigan, soft diffuse window lighting, clean eco lifestyle aesthetic, shallow depth of field, gentle earth tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlSugcrgRNWksqndJxonpCqN943tbBctY6JuMIGOSOc1lNnrzIcuZkIfL4cF1D3uAluALdXqzStpDXcuwsDvDvOhmytp5dOVlhWmJIzrCH7KGAiMWxVgEJQeF6FkI4XX5pQjiUIZp1MfmtQf_7G3L7YwhQd6fQYz4JVDMhp_t-y_tEq-ptB7sGyFoHEh7Z_zjBV3KI0bA-IdeSeIA77GgcVlH9bKLYOMelfJUAqvgy">
+</div>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-secondary-container text-on-primary rounded-full p-1 shadow-sm flex items-center justify-center" title="ゴールドアンバサダー">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5 min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">佐藤 結衣</h1>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ Yui Sato</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-badge text-label-badge font-bold">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+                  レスキューゴールドアンバサダー
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">yui.sato***@example.com</p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">storefront</span>
+<span class="font-body-sm text-body-sm text-on-surface">マイ店舗: <strong class="font-medium">ライフ 渋谷桜丘店</strong></span>
+<button class="font-body-sm text-body-sm text-primary hover:underline font-medium cursor-pointer ml-1" type="button">変更</button>
+</div>
+</div>
+</div>
+<!-- Profile Actions -->
+<div class="flex sm:flex-row lg:flex-col items-stretch sm:items-center lg:items-end justify-end gap-space-xs">
+<button class="inline-flex items-center justify-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-body-sm text-body-sm font-medium transition-colors cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span>プロフィール編集</span>
+</button>
+<div class="inline-flex items-center gap-1 text-on-surface-variant font-label-caption text-label-caption px-space-xs">
+<span class="material-symbols-outlined text-[14px] text-tertiary">verified_user</span>
+<span>店頭レジ連携認証済み</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Eco Impact Summary Dashboard (High-Visual Punch & Bento Structure) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<div class="inline-flex items-center gap-space-xs text-primary font-headline-md text-headline-md font-bold">
+<span class="material-symbols-outlined text-[24px]">energy_savings_leaf</span>
+<h2>食品ロス削減貢献実績</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">あなたの店頭でのレスキューお買い物が地球と地域を直接サポートしています</p>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface-variant bg-surface-container px-2.5 py-1 rounded-full self-start sm:self-auto">2024年4月 参加開始</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Metric 1: Saved Items with SVG Sparkline Ring -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between relative overflow-hidden group">
+<div class="flex flex-col gap-1 z-10">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">lunch_dining</span>
+                累計削減食材数
+              </span>
+<div class="flex items-baseline gap-1">
+<span class="font-label-numeric-lg text-headline-xl text-primary tracking-tight">38</span>
+<span class="font-body-md text-body-md font-bold text-on-surface">品</span>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface-variant">今月 +6品 レスキュー済</span>
+</div>
+<div class="relative w-16 h-16 flex-shrink-0 z-10">
+<svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
+<path class="text-outline-variant/30" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary transition-all duration-700" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="76, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-label-badge text-label-badge font-bold text-primary">76%</div>
+</div>
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary-fixed/15 rounded-full blur-xl pointer-events-none"></div>
+</div>
+<!-- Metric 2: CO2 Footprint Reduction & Tree Metric -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between relative overflow-hidden">
+<div class="flex flex-col gap-1 z-10">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">co2</span>
+                累計CO₂削減貢献量
+              </span>
+<div class="flex items-baseline gap-1">
+<span class="font-label-numeric-lg text-headline-xl text-tertiary tracking-tight">約 14.2</span>
+<span class="font-body-md text-body-md font-bold text-on-surface">kg</span>
+</div>
+</div>
+<div class="mt-2 pt-2 bg-surface-container-lowest/70 backdrop-blur rounded-lg px-2.5 py-1.5 flex items-center gap-space-xs z-10">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">forest</span>
+<p class="font-label-caption text-label-caption text-on-surface-variant">杉の木 <strong class="text-primary font-bold">約 1.6 本分</strong> の年間吸収量に相当</p>
+</div>
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-tertiary-fixed/20 rounded-full blur-xl pointer-events-none"></div>
+</div>
+<!-- Metric 3: Money Saved in Supermarket Aisle -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between relative overflow-hidden">
+<div class="flex flex-col gap-1 z-10">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">savings</span>
+                これまでのおトク総額
+              </span>
+<div class="flex items-baseline gap-1">
+<span class="font-label-numeric-lg text-headline-xl text-secondary tracking-tight">¥3,480</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">割引適用</span>
+</div>
+</div>
+<div class="mt-2 pt-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm z-10">
+<span class="font-label-caption text-label-caption">次回お買い物でも活用中</span>
+<span class="inline-flex items-center text-secondary font-label-badge text-label-badge font-bold">平均 23% OFF</span>
+</div>
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-secondary-fixed/20 rounded-full blur-xl pointer-events-none"></div>
+</div>
+</div>
+<!-- Level Progress Bar -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-body-lg text-on-surface font-bold">ゴールドランク</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_forward</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">次: プラチナランク</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary font-bold">あと 2品 レスキューでプラチナランク達成！</p>
+</div>
+</div>
+<div class="w-full sm:w-64 flex flex-col gap-1">
+<div class="flex justify-between font-label-caption text-label-caption text-on-surface-variant">
+<span>達成率 95%</span>
+<span>38 / 40品</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 95%;"></div>
+</div>
+</div>
+</div>
+</section><!-- Shopping Reference Address & Nearby Supermarket Settings Section -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm space-y-space-md">
+  <!-- Header -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+    <div class="flex items-center gap-space-xs">
+      <div class="w-9 h-9 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary flex-shrink-0">
+        <span class="material-symbols-outlined text-[22px]">location_on</span>
+      </div>
+      <div>
+        <div class="flex items-center gap-space-xs flex-wrap">
+          <h2 class="font-headline-md text-headline-md text-on-surface font-bold">お買い物基準住所・近隣スーパー検索設定</h2>
+          <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-badge text-label-badge font-bold">
+            <span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            近隣スーパー優先表示中
+          </span>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">ご自宅や活動拠点の住所を基準に、近隣店舗の見切り品やおすすめAIレシピを優先してご案内します</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Current Registered Address & Toggle Status Card -->
+  <div class="bg-surface-container-low rounded-xl p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+    <div class="flex items-start gap-space-sm">
+      <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+        <span class="material-symbols-outlined text-[20px]">home_pin</span>
+      </div>
+      <div class="space-y-0.5 min-w-0">
+        <div class="flex items-center gap-space-xs flex-wrap">
+          <span class="font-label-badge text-label-badge bg-surface-container px-2 py-0.5 rounded text-on-surface font-bold">登録住所（メイン）</span>
+          <span class="font-label-numeric-md text-body-md font-bold text-on-surface">〒150-0031</span>
+        </div>
+        <p class="font-headline-md text-body-lg text-on-surface font-bold">東京都渋谷区桜丘町 23-21</p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px] text-primary">storefront</span>
+          最寄り店舗: <strong>ライフ 渋谷桜丘店</strong> (徒歩 約4分 / 320m)
+        </p>
+      </div>
+    </div>
+    <div class="flex items-center gap-space-xs flex-shrink-0 self-end md:self-auto">
+      <button type="button" class="inline-flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-body-sm text-body-sm font-medium transition-colors cursor-pointer">
+        <span class="material-symbols-outlined text-[16px]">edit</span>
+        <span>編集する</span>
+      </button>
+      <button type="button" class="inline-flex items-center gap-1 px-space-md py-1.5 rounded-lg hover:bg-error-container/40 text-error font-body-sm text-body-sm font-medium transition-colors cursor-pointer">
+        <span class="material-symbols-outlined text-[16px]">delete</span>
+        <span>削除する</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Toggle Switch & Behavior Description -->
+  <div class="bg-surface-container-low/70 rounded-xl p-space-md space-y-space-xs">
+    <div class="flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-xs">
+        <span class="material-symbols-outlined text-[20px] text-primary">near_me</span>
+        <span class="font-headline-md text-body-md text-on-surface font-bold">この住所をもとに近隣のスーパーを優先表示する</span>
+      </div>
+      <!-- Interactive styled switch (Active ON) -->
+      <button type="button" role="switch" aria-checked="true" class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-primary transition-colors duration-300 items-center px-0.5">
+        <span class="inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow transition duration-300 translate-x-5"></span>
+      </button>
+    </div>
+    <p class="font-body-sm text-body-sm text-on-surface-variant pl-7">
+      ホーム画面や食材検索時に、ご自宅から近い店舗（ライフ 渋谷桜丘店など）や、その店舗のリアルタイム見切り品・AIレシピ提案を最優先で表示します。ヘッダーの店舗切り替えボタンから別の店舗を手動で選択することも可能です。
+    </p>
+  </div>
+
+  <!-- Address Edit / Registration Form -->
+  <details class="group bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden">
+    <summary class="flex items-center justify-between p-space-md cursor-pointer select-none hover:bg-surface-container-low transition-colors list-none">
+      <div class="flex items-center gap-space-xs">
+        <span class="material-symbols-outlined text-primary text-[20px]">app_registration</span>
+        <span class="font-headline-md text-body-md text-on-surface font-bold">基準住所の変更・新規入力フォーム</span>
+      </div>
+      <div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+        <span class="text-primary font-medium group-open:hidden">フォームを開く</span>
+        <span class="text-primary font-medium hidden group-open:inline">閉じる</span>
+        <span class="material-symbols-outlined text-[20px] transition-transform duration-300 group-open:rotate-180">expand_more</span>
+      </div>
+    </summary>
+    <div class="p-space-md pt-0 space-y-space-md bg-surface-container-lowest">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-xs">
+        <!-- Postal Code -->
+        <div class="space-y-1">
+          <label class="block font-body-sm text-body-sm font-medium text-on-surface">郵便番号 <span class="text-error font-bold">*</span></label>
+          <div class="flex gap-space-xs">
+            <input type="text" value="150-0031" placeholder="150-0031" class="w-full px-space-sm py-2 rounded-lg bg-surface border border-outline-variant/30 font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary">
+            <button type="button" class="flex-shrink-0 px-space-sm py-2 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-body-sm text-body-sm font-medium transition-colors cursor-pointer">
+              自動入力
+            </button>
+          </div>
+        </div>
+        <!-- Prefecture -->
+        <div class="space-y-1">
+          <label class="block font-body-sm text-body-sm font-medium text-on-surface">都道府県 <span class="text-error font-bold">*</span></label>
+          <select class="w-full px-space-sm py-2 rounded-lg bg-surface border border-outline-variant/30 font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer">
+            <option value="東京都" selected="">東京都</option>
+            <option value="神奈川県">神奈川県</option>
+            <option value="埼玉県">埼玉県</option>
+            <option value="千葉県">千葉県</option>
+          </select>
+        </div>
+        <!-- City / Street -->
+        <div class="space-y-1 sm:col-span-1">
+          <label class="block font-body-sm text-body-sm font-medium text-on-surface">市区町村・丁目番地 <span class="text-error font-bold">*</span></label>
+          <input type="text" value="渋谷区桜丘町 23-21" placeholder="渋谷区桜丘町 23-21" class="w-full px-space-sm py-2 rounded-lg bg-surface border border-outline-variant/30 font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary">
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md items-end">
+        <!-- Building / Room -->
+        <div class="space-y-1 sm:col-span-2">
+          <label class="block font-body-sm text-body-sm font-medium text-on-surface">建物名・部屋番号 <span class="text-on-surface-variant font-normal">（任意）</span></label>
+          <input type="text" placeholder="例: ○○マンション 302号室" class="w-full px-space-sm py-2 rounded-lg bg-surface border border-outline-variant/30 font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary">
+        </div>
+        <!-- Save Button -->
+        <div>
+          <button type="button" class="w-full inline-flex items-center justify-center gap-space-xs px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-sm text-body-sm font-bold shadow transition-colors cursor-pointer">
+            <span class="material-symbols-outlined text-[18px]">save</span>
+            <span>設定を保存する</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- Privacy & Unregistered Guidance Dual Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm pt-space-xs">
+    <!-- Security & Privacy Notice -->
+    <div class="bg-surface-container-low rounded-xl p-space-sm flex items-start gap-space-xs">
+      <span class="material-symbols-outlined text-[18px] text-tertiary flex-shrink-0 mt-0.5">lock</span>
+      <p class="font-label-caption text-label-caption text-on-surface-variant">
+        <strong class="text-on-surface">個人情報保護方針：</strong>登録された住所は、お客様自身の端末における近隣スーパーの距離計算および優先表示にのみ使用されます。店舗スタッフや他のユーザーへ公開されることは一切ありません。
+      </p>
+    </div>
+    <!-- Unregistered Guidance Preview -->
+    <div class="bg-surface-container-low rounded-xl p-space-sm flex items-start gap-space-xs">
+      <span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0 mt-0.5">explore</span>
+      <p class="font-label-caption text-label-caption text-on-surface-variant">
+        <strong class="text-on-surface">未登録時のご利用：</strong>住所未登録の場合は、郵便番号検索・市区町村指定、または端末の現在地アクセス許可により近隣店舗をお探しいただけます。
+      </p>
+    </div>
+  </div>
+</section>
+<!-- 3. Main Split Content Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Primary Shopper Hub (7 cols on lg, 8 cols on xl) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Section A: Active In-Store Coupons Banner (Urgent Action Barcode Prompt) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">qr_code_scanner</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">保有中の店頭マイクーポン</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-primary font-label-badge text-label-badge font-bold">2枚保有中</span>
+</div>
+<!-- Active Hero Coupon Card -->
+<div class="relative bg-gradient-to-br from-secondary-container/10 via-surface-container-low to-surface-container rounded-xl p-space-md overflow-hidden">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md relative z-10">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-secondary text-on-secondary font-label-badge text-label-badge font-bold">本日有効</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 21:00まで有効
+                    </span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">絶品おうち牛丼 3品まとめ買いセット割</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">対象店舗: ライフ 渋谷桜丘店 レジ精算時にバーコードをご提示ください</p>
+</div>
+<div class="flex flex-col items-end gap-1 flex-shrink-0">
+<span class="font-headline-lg text-headline-lg text-secondary font-bold">¥100 OFF</span>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-sm text-body-sm font-bold shadow-md transition-all cursor-pointer" data-path="c07-my-coupons" href="#">
+<span class="material-symbols-outlined text-[18px]">barcode</span>
+<span>レジ提示用バーコード</span>
+</a>
+</div>
+</div>
+<!-- Barcode aesthetic accent stripes in background -->
+<div class="absolute right-0 top-0 bottom-0 w-28 opacity-5 flex gap-1 pointer-events-none">
+<div class="w-1.5 h-full bg-on-surface"></div>
+<div class="w-3 h-full bg-on-surface"></div>
+<div class="w-1 h-full bg-on-surface"></div>
+<div class="w-4 h-full bg-on-surface"></div>
+<div class="w-2 h-full bg-on-surface"></div>
+<div class="w-1 h-full bg-on-surface"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+                取り置き不可・店頭実在庫のみ対象です
+              </span>
+<a class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-body-sm text-body-sm font-medium transition-colors" data-path="c07-my-coupons" href="#">
+<span>マイクーポンを開く (2枚保有中)</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Section B: Favorite Rescue Recipes (AI Optimized) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">bookmark_added</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">保存したレスキューレシピ</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">見切り食材を美味しく使い切る保存済みAIレシピ</p>
+</div>
+<a class="hidden sm:inline-flex items-center gap-1 text-primary hover:text-primary-container font-body-sm text-body-sm font-medium transition-colors" data-path="c04-ai-recipes" href="#">
+<span>すべて見る</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Recipe Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<!-- Recipe Card 1 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col group cursor-pointer">
+<div class="relative h-36 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Close up gourmet presentation of Japanese gyudon beef bowl over steaming rice, garnished with thinly sliced sweet onions, pickled red ginger benishoga, and soft spring onion, warm ambient kitchen restaurant light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8tPSGXD2GZevVdwN3esYfppS6eY2kNzDdbMo1L_dzg1YsbCtU-bWOkXbyTjAFhxqgK4YGBt5RMWlyo37c7u1rXe5Z4ihEZVwoi7c_prJzvnFAP7hS9IM0jHr0RZb2zJGlHHiHTrK9Tp4r5UXU4rR5Ma3o794qMJWPTtQZrgIdlNBBT4SkHkYZf7Kfi1XpoBOEO4eb9kdcA3OD48UgVbUWK5-KheaUqjFA9s20uIY5">
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-inverse-surface/80 backdrop-blur text-inverse-on-surface font-label-badge text-label-badge font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">timer</span> 15分
+                  </span>
+<span class="absolute top-2 right-2 px-2 py-0.5 rounded bg-secondary text-on-secondary font-label-badge text-label-badge font-bold">
+                    ¥100引
+                  </span>
+</div>
+<div class="p-space-sm flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-md text-body-md text-on-surface font-bold line-clamp-1 group-hover:text-primary transition-colors">絶品おうち牛丼</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">牛小間切れ肉と玉ねぎをおいしくレスキュー</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-caption text-label-caption text-on-surface-variant">
+<span class="text-primary font-bold">CO₂ -420g</span>
+<span class="flex items-center gap-0.5 text-primary">食材を探す <span class="material-symbols-outlined text-[12px]">search</span></span>
+</div>
+</div>
+</div>
+<!-- Recipe Card 2 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col group cursor-pointer">
+<div class="relative h-36 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Hearty Japanese tonjiru pork and root vegetable miso soup in a traditional dark ceramic bowl, containing sliced daikon radish, carrots, burdock root, and pork belly with green scallions on top, warm cozy kitchen lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwx07Qk5mQSvO8hXBDJ949XMM7K5YEoeOJdxmYL0gxlPck8Qvdb5FY2C0QdFzyenzX4plNET3wrNkvLUxDf7i726OiouJ7Sw0mQEnKx4onGw0_gEYkNA76-RQLlV3NPdwdra445HX6PW26YN4_kHn3xijwRMZiBkMs24i3BWlahowS0vDy3_wUgj90zm2T58S2VXQVneMuYI1ytyx8mScMkZBCyWXIeSBVyDLWVu0z">
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-inverse-surface/80 backdrop-blur text-inverse-on-surface font-label-badge text-label-badge font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">timer</span> 20分
+                  </span>
+<span class="absolute top-2 right-2 px-2 py-0.5 rounded bg-secondary text-on-secondary font-label-badge text-label-badge font-bold">
+                    ¥80引
+                  </span>
+</div>
+<div class="p-space-sm flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-md text-body-md text-on-surface font-bold line-clamp-1 group-hover:text-primary transition-colors">ヘルシー野菜たっぷり 豚汁</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">根菜と豚こまの見切りパックで具だくさん</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-caption text-label-caption text-on-surface-variant">
+<span class="text-primary font-bold">CO₂ -310g</span>
+<span class="flex items-center gap-0.5 text-primary">食材を探す <span class="material-symbols-outlined text-[12px]">search</span></span>
+</div>
+</div>
+</div>
+<!-- Recipe Card 3 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col group cursor-pointer">
+<div class="relative h-36 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Vibrant healthy Japanese stir fry of tender chicken breast cubes and bright green broccoli florets in shio-koji glaze on a clean minimalist white plate, fresh steam rising, crisp natural bright culinary lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8FxM7EPUipI2GUn3rzJQW-7F8eaO3JTG9Q4hX2f9Q_3S0xDc_4y5GTwFqa7Qe-oQwwixxYOTc-8Agw20i-9lc28cMdX8P6b4C78e2FwqZ59WZF-PZwCdCEuQtRrn0QTSFu2sTPv78bmYWAnzC3H-Aam6mEQhHSG4kTFTTABGw1vomtRX-hLE8a_rZhIsc_QcSEsXhoeqNYg03dgeau1F8Z3youR9_M2qW5kjhhr--">
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-inverse-surface/80 backdrop-blur text-inverse-on-surface font-label-badge text-label-badge font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">timer</span> 12分
+                  </span>
+<span class="absolute top-2 right-2 px-2 py-0.5 rounded bg-secondary text-on-secondary font-label-badge text-label-badge font-bold">
+                    ¥120引
+                  </span>
+</div>
+<div class="p-space-sm flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-md text-body-md text-on-surface font-bold line-clamp-1 group-hover:text-primary transition-colors">鶏むね肉とブロッコリーの塩麹炒め</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">高タンパクで時短調理、本日消費期限品向け</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-caption text-label-caption text-on-surface-variant">
+<span class="text-primary font-bold">CO₂ -510g</span>
+<span class="flex items-center gap-0.5 text-primary">食材を探す <span class="material-symbols-outlined text-[12px]">search</span></span>
+</div>
+</div>
+</div>
+</div>
+<div class="sm:hidden text-center pt-2">
+<a class="inline-flex items-center gap-1 text-primary font-body-sm text-body-sm font-medium" data-path="c04-ai-recipes" href="#">
+<span>お気に入りレシピをすべて見る</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</section>
+<!-- Section C: Coupon Retrieval & Register In-Store Redemption History -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">history</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">クーポン取得・店頭利用履歴</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">※店頭レジにてバーコードスキャンを実施した実績データです（EC決済履歴ではありません）</p>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface-variant bg-surface-container px-2.5 py-1 rounded-full self-start sm:self-auto">直近3件を表示</span>
+</div>
+<!-- History List (Tonal blocks, no hard borders) -->
+<div class="space-y-space-xs">
+<!-- Item 1: Redeemed -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start sm:items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-numeric-md text-body-md font-bold text-on-surface">2025/05/10</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/15 text-primary font-label-badge text-label-badge font-bold">店頭レジ利用済</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ライフ 渋谷桜丘店</span>
+</div>
+<p class="font-headline-md text-body-md text-on-surface font-medium truncate mt-0.5">絶品おうち牛丼セット割</p>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between gap-0.5 pl-14 sm:pl-0 flex-shrink-0">
+<span class="font-label-numeric-md text-body-lg text-secondary font-bold">-¥100 割引</span>
+<span class="font-label-caption text-label-caption text-primary">食品ロス削減貢献</span>
+</div>
+</div>
+<!-- Item 2: Redeemed -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start sm:items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-numeric-md text-body-md font-bold text-on-surface">2025/05/08</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/15 text-primary font-label-badge text-label-badge font-bold">店頭レジ利用済</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ライフ 渋谷桜丘店</span>
+</div>
+<p class="font-headline-md text-body-md text-on-surface font-medium truncate mt-0.5">旬の鮮魚カルパッチョセット割</p>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between gap-0.5 pl-14 sm:pl-0 flex-shrink-0">
+<span class="font-label-numeric-md text-body-lg text-secondary font-bold">-¥150 割引</span>
+<span class="font-label-caption text-label-caption text-primary">食品ロス削減貢献</span>
+</div>
+</div>
+<!-- Item 3: Expired -->
+<div class="bg-surface-container-low/70 rounded-xl p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm opacity-80">
+<div class="flex items-start sm:items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">event_busy</span>
+</div>
+<div class="min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-numeric-md text-body-md font-bold text-on-surface-variant">2025/05/03</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-label-badge text-label-badge font-medium">期限切れ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">未利用</span>
+</div>
+<p class="font-headline-md text-body-md text-on-surface-variant font-medium truncate mt-0.5">豚汁具だくさんセット割</p>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between gap-0.5 pl-14 sm:pl-0 flex-shrink-0">
+<span class="font-label-numeric-md text-body-md text-on-surface-variant line-through">¥80 割引</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">有効期限終了</span>
+</div>
+</div>
+</div>
+<!-- Clarification Notice Note Box -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant flex-shrink-0 mt-0.5">info</span>
+<p class="font-label-caption text-label-caption text-on-surface-variant">
+                ※本アプリは店頭購入サポートアプリです。レジでのクーポン提示により割引が適用されます。事前決済や商品の取り置き・予約機能はございません。
+              </p>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Sidebar & Account Preferences (5 cols on lg, 4 cols on xl) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Card 1: Account Settings Menu -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">manage_accounts</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">アカウント設定</h3>
+</div>
+<div class="space-y-space-xs font-body-sm text-body-sm">
+<!-- Setting Item: Login & Password -->
+<a class="group flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors" href="#">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+</div>
+<div>
+<span class="font-body-md text-body-md text-on-surface font-medium block">ログイン・パスワード</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">セキュリティ設定</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</a>
+<!-- Setting Item: Frequent Stores -->
+<a class="group flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors" href="#">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">store</span>
+</div>
+<div>
+<span class="font-body-md text-body-md text-on-surface font-medium block">よく行く店舗の設定</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">現在 1店舗 登録 (最大3店舗)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</a>
+<!-- Setting Item: Notifications -->
+<a class="group flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors" href="#">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+</div>
+<div>
+<span class="font-body-md text-body-md text-on-surface font-medium block">通知・タイムセール設定</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">見切り品・AI献立プッシュ ON</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</a>
+<!-- Setting Item: Allergens & Preferences -->
+<a class="group flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors" href="#">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">no_meals</span>
+</div>
+<div>
+<span class="font-body-md text-body-md text-on-surface font-medium block">アレルゲン・苦手な食材</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">AI献立提案の自動最適化</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Card 2: Support & Guides (Clear supermarket focus) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">help_center</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">サポート＆ヘルプ</h3>
+</div>
+<div class="space-y-space-xs font-body-sm text-body-sm">
+<a class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low text-on-surface transition-colors" data-path="shopping-guide" href="#">
+<span class="flex items-center gap-space-xs font-medium">
+<span class="material-symbols-outlined text-[18px] text-primary">local_convenience_store</span>
+                  店頭でのご利用ガイド
+                </span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low text-on-surface transition-colors" href="#">
+<span class="flex items-center gap-space-xs font-medium">
+<span class="material-symbols-outlined text-[18px] text-primary">quiz</span>
+                  よくあるご質問 (FAQ)
+                </span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low text-on-surface transition-colors" href="#">
+<span class="flex items-center gap-space-xs font-medium">
+<span class="material-symbols-outlined text-[18px] text-primary">mail</span>
+                  お問い合わせフォーム
+                </span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low text-on-surface-variant transition-colors" data-path="privacy-policy" href="#">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+                  利用規約・プライバシーポリシー
+                </span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+<div class="pt-space-xs">
+<button class="w-full flex items-center justify-center gap-space-xs py-2 px-space-md rounded-lg text-error hover:bg-error-container/40 transition-colors font-body-sm text-body-sm font-medium cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[18px]">logout</span>
+<span>ログアウト</span>
+</button>
+</div>
+</div>
+<!-- Quick Tip Card -->
+<div class="bg-gradient-to-br from-primary-fixed/20 to-surface-container-high rounded-xl p-space-md space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-headline-md text-body-lg font-bold">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+<span>店頭お買い物のコツ</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              夕方17時〜19時はスーパー各店で「見切り品」シールの貼付タイミング。アプリで通知をONにしておくとタイムリーに食材に出会えます。
+            </p>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface-variant mt-space-xl"><div class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl"><div class="bg-surface-container-lowest rounded-xl p-space-md mb-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-secondary text-[22px] flex-shrink-0">info</span><div class="flex flex-col gap-space-xs"><p class="font-headline-md text-body-lg text-on-surface">ご利用ガイド（お買い物にあたってのお願い）</p><p class="font-body-sm text-body-sm text-on-surface-variant">Food Rescueは店頭での食品ロス削減を応援するアプリです。<strong>店舗で商品を選び、レジでクーポンをご提示ください。※予約・取り置きサービスではありません。</strong> 店頭の在庫状況はリアルタイムで変動するため、売り切れの際はご容赦ください。</p></div></div></div><div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg mb-space-lg"><div class="space-y-space-xs"><div class="flex items-center gap-space-xs text-primary font-headline-md text-headline-md"><span class="material-symbols-outlined">eco</span><span>Food Rescue</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">スーパーの食品ロスをAIとテクノロジーでおいしく解決。地域とお店をつなぐサステナブルな買い物支援プラットフォームです。</p></div><div><p class="font-headline-md text-body-md text-on-surface mb-space-sm">サービス</p><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="hover:text-primary transition-colors" data-path="c02-search-products" href="#">値引き食材・見切り品検索</a></li><li><a class="hover:text-primary transition-colors" data-path="c04-ai-recipes" href="#">食品ロス削減AIレシピ</a></li><li><a class="hover:text-primary transition-colors" data-path="c07-my-coupons" href="#">レジ提示用マイクーポン</a></li></ul></div><div><p class="font-headline-md text-body-md text-on-surface mb-space-sm">インフォメーション</p><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="hover:text-primary transition-colors" data-path="eco-initiatives" href="#">食品ロス削減への取り組み</a></li><li><a class="hover:text-primary transition-colors" data-path="shopping-guide" href="#">ご利用ガイド</a></li><li><a class="hover:text-primary transition-colors" data-path="company-overview" href="#">会社概要</a></li><li><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">プライバシーポリシー</a></li></ul></div><div><p class="font-headline-md text-body-md text-on-surface mb-space-sm">加盟店・パートナー</p><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="flex items-center gap-space-xs text-primary hover:text-primary-container transition-colors font-medium" data-path="store-staff-login" href="#"><span class="material-symbols-outlined text-[16px]">lock</span><span>店舗スタッフログイン</span></a></li><li><a class="hover:text-primary transition-colors" data-path="store-registration-inquiry" href="#">新規加盟スーパーのお問い合わせ</a></li></ul></div></div><div class="pt-space-md border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm"><p>© 2025 Food Rescue Japan. All rights reserved.</p><p class="text-label-caption text-on-surface-variant">本サービスは店頭購買支援専用です（オンライン決済・事前取り置き不可）</p></div></div></footer>
+
+</body></html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Food Rescue - 食品ロス削減システム</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-container":"#f5fff7","tertiary-fixed":"#6ffbbe","secondary-container":"#fd761a","primary-fixed-dim":"#68dba9","on-surface-variant":"#3d4a42","inverse-on-surface":"#ecf1ff","outline-variant":"#bccac0","surface-container":"#e7eeff","primary":"#006948","on-surface":"#111c2d","on-tertiary-fixed-variant":"#005236","surface":"#f9f9ff","tertiary-fixed-dim":"#4edea3","on-primary-fixed-variant":"#005137","surface-tint":"#006c4a","surface-dim":"#cfdaf2","secondary":"#9d4300","surface-container-lowest":"#ffffff","on-primary-fixed":"#002114","surface-container-low":"#f0f3ff","on-secondary-fixed-variant":"#783200","surface-container-high":"#dee8ff","on-secondary-container":"#5c2400","secondary-fixed":"#ffdbca","background":"#f9f9ff","on-error-container":"#93000a","on-secondary-fixed":"#341100","on-primary":"#ffffff","on-secondary":"#ffffff","error-container":"#ffdad6","on-tertiary-container":"#f5fff6","tertiary":"#006947","outline":"#6d7a72","on-tertiary-fixed":"#002113","primary-container":"#00855d","surface-variant":"#d8e3fb","on-tertiary":"#ffffff","surface-bright":"#f9f9ff","surface-container-highest":"#d8e3fb","inverse-surface":"#263143","tertiary-container":"#00855b","primary-fixed":"#85f8c4","secondary-fixed-dim":"#ffb690","inverse-primary":"#68dba9","on-error":"#ffffff","error":"#ba1a1a","on-background":"#111c2d"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-mobile":"1rem","space-xs":"0.25rem","space-sm":"0.5rem",gutter:"1rem","gutter-mobile":"0.75rem",margin:"1.5rem","space-lg":"1.5rem","space-xl":"2.5rem","space-md":"1rem"},fontFamily:{"body-md":["Noto Sans"],"label-numeric-md":["Inter"],"label-numeric-lg":["Inter"],"headline-lg":["Noto Sans"],"headline-xl-mobile":["Noto Sans"],"body-sm":["Noto Sans"],"headline-xl":["Noto Sans"],"body-lg":["Noto Sans"],"label-caption":["Noto Sans"],"headline-md":["Noto Sans"],"label-badge":["Noto Sans"],"headline-lg-mobile":["Noto Sans"]},fontSize:{"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-numeric-md":["16px",{lineHeight:"20px",fontWeight:"700"}],"label-numeric-lg":["22px",{lineHeight:"28px",fontWeight:"700"}],"headline-lg":["24px",{lineHeight:"32px",fontWeight:"700"}],"headline-xl-mobile":["26px",{lineHeight:"34px",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"headline-xl":["32px",{lineHeight:"40px",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"500"}],"label-caption":["10px",{lineHeight:"14px",fontWeight:"500"}],"headline-md":["18px",{lineHeight:"26px",fontWeight:"700"}],"label-badge":["11px",{lineHeight:"14px",fontWeight:"700"}],"headline-lg-mobile":["20px",{lineHeight:"28px",fontWeight:"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="Food Rescue Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlsn4_3t_7oZW1pfzbgEyyS0_e-3W_Dgh9EqnYSjhdJSdT8KdvBVqwrykznUPIglB7T62ZFktb50RJEx1Xz9fbCRSTG98l6gLl4WqPVgeyC-7RPMoQ-WYkxc5nXLQy4MAiSxhnSf07VfetpHp5YAHs12IRqiUARALGiiV-iLrFa0efzolOlwEo-pfr6wpppQd6t-sHltjzgC8JL4wHgeebaIp6p61hbYW43_pjgdIm"/><span class="font-headline-md text-headline-md text-primary tracking-tight">Food Rescue</span></a><button class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface transition-colors cursor-pointer" type="button"><span class="material-symbols-outlined text-[18px] text-primary">storefront</span><span class="font-body-sm text-body-sm font-medium">ライフ 渋谷桜丘店</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></button></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg"><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="home" href="#">ホーム</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="search-products" href="#">食材を探す</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="ai-recipes" href="#">AIレシピ</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="my-coupons" href="#">マイクーポン</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="my-page" href="#">マイページ</a></nav><div class="flex items-center gap-space-sm"><a class="hidden md:inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors font-body-sm text-body-sm" data-path="store-admin-dashboard" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">badge</span><span>店舗管理システムへ (スタッフ用)</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full max-w-6xl mx-auto px-margin-mobile lg:px-margin py-space-md">
+<!-- Top Navigation & Branch Status -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<a class="inline-flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm" data-path="c05-recipe-set-detail" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>レシピセット詳細へ戻る</span>
+</a>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-body-sm text-body-sm font-medium">ライフ 渋谷桜丘店 リアルタイム在庫連動中</span>
+<span class="text-label-caption text-on-surface-variant font-label-caption">18:42 更新</span>
+</div>
+</div>
+<!-- Stepper Tracker -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md mb-space-lg shadow-sm">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm relative">
+<!-- Step 1 -->
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-numeric-md text-label-numeric-md">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-caption text-label-caption text-primary">STEP 1 完了</p>
+<p class="font-body-sm text-body-sm text-on-surface font-medium truncate">食材選択</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-numeric-md text-label-numeric-md">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-caption text-label-caption text-primary">STEP 2 完了</p>
+<p class="font-body-sm text-body-sm text-on-surface font-medium truncate">レシピ決定</p>
+</div>
+</div>
+<!-- Step 3 Active -->
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-numeric-md text-label-numeric-md shadow-sm">
+<span>3</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-caption text-label-caption text-secondary font-bold">STEP 3 現在地</p>
+<p class="font-headline-md text-body-md text-on-surface truncate">クーポン確認</p>
+</div>
+</div>
+<!-- Step 4 Next -->
+<div class="flex items-center gap-space-xs opacity-60">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-numeric-md text-label-numeric-md">
+<span>4</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-caption text-label-caption text-on-surface-variant">STEP 4 次のステップ</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">店頭レジでお会計</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Header Intro -->
+<div class="mb-space-lg">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed mb-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">eco</span>
+<span class="font-label-badge text-label-badge font-bold">食品ロス救済セット割</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">レシピセット割引クーポンの取得確認</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+        対象の食材3点を店内の各売り場でお選びいただき、レジでバーコードを提示することで、お会計時に<strong class="text-secondary font-bold">一括 ¥100 引き</strong>が適用されます。
+      </p>
+</div>
+<!-- Main Content Layout: Two Columns -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Voucher & Ingredients (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Physical Ticket Style Coupon Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md overflow-hidden relative">
+<!-- Top decorative gradient line -->
+<div class="h-2 bg-gradient-to-r from-primary via-tertiary to-secondary-container"></div>
+<div class="p-space-lg">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<span class="px-space-sm py-1 rounded-md bg-secondary text-on-secondary font-label-badge text-label-badge font-bold inline-flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px]">confirmation_number</span>
+<span>店頭レスキュー限定 3点まとめ買いセット割</span>
+</span>
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-caption text-label-caption font-bold">
+                CO₂ 約380g削減
+              </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface leading-tight mb-space-xs">
+              絶品おうち牛丼 セット割引きクーポン
+            </h2>
+<!-- Big Discount Highlight Banner -->
+<div class="my-space-md p-space-md rounded-xl bg-gradient-to-br from-surface-container-low to-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caption text-label-caption text-on-surface-variant">お会計時レジ提示で</span>
+<span class="font-headline-md text-headline-md text-secondary">合計金額から割引</span>
+</div>
+<div class="flex items-baseline text-secondary">
+<span class="font-headline-md text-headline-md font-bold">-¥</span>
+<span class="font-label-numeric-lg text-[40px] leading-none font-bold tracking-tight">100</span>
+<span class="font-label-badge text-label-badge ml-1 text-on-secondary-container font-bold">（税込相当）</span>
+</div>
+</div>
+<!-- Metadata Details -->
+<div class="space-y-space-xs text-body-sm font-body-sm bg-surface-container-lowest rounded-lg">
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">store</span>
+<span class="text-on-surface font-medium">対象店舗:</span>
+<span class="font-bold text-on-surface">ライフ 渋谷桜丘店 限定</span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">schedule</span>
+<span class="text-on-surface font-medium">有効期限:</span>
+<span class="font-bold text-secondary">本日 21:00 まで有効</span>
+<span class="text-label-caption text-on-surface-variant">（精肉売り場の当日消費期限に準ずる）</span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">receipt_long</span>
+<span class="text-on-surface font-medium">提示方法:</span>
+<span>会計時にマイクーポン内のバーコードをレジでスキャン</span>
+</div>
+</div>
+</div>
+<!-- Perforated Tear-off Line Motif -->
+<div class="relative flex items-center justify-between px-space-md bg-surface-container-low py-space-xs">
+<span class="text-label-caption font-label-caption text-on-surface-variant tracking-widest uppercase">FOOD RESCUE VERIFIED SET COUPON</span>
+<span class="font-label-numeric-md text-label-caption text-on-surface-variant">ID: RCP-2025-0549</span>
+</div>
+</div>
+<!-- Target Products Checklist (Review before claiming) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">shopping_basket</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">対象商品チェックリスト (合計3点)</h3>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">店内でご自身でカゴへ投入</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Item 1 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<img class="w-16 h-16 rounded-lg object-cover flex-shrink-0" data-alt="Thinly sliced Japanese domestic beef shoulder roast packed in a clear supermarket tray with an orange 30% markdown sticker under warm retail lighting, high resolution Japanese grocery shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD6duvvefBAQAnS80o9MyL_aazdgwIYK4XwCKK6MVgY2yP-o-Kb9aVluVP-GtP1t1l9pJvLgbOrrUh9n3BQAMavMG6iH4spL1MOvM0rE3vt0smWtZRBMZRMC8vhAIxRJkoyizu6m5tNQDYOqohNaXaqpfSzCZ09acORJ5YNik68gKJbsS19OiSNoHParLCWyXJlXZsEbt0SmtGTx5MTXXLT0tdDfhwo5yr3r4bYqnj"/>
+<div class="flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-0.5">
+<span class="px-space-xs py-0.5 rounded bg-error text-on-error font-label-badge text-label-caption font-bold">見切り品 30% OFF</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-caption text-label-caption">1F 精肉コーナー</span>
+</div>
+<p class="font-body-md text-body-md font-bold text-on-surface truncate">国産牛肩ローススライス 250g</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">消費期限: 本日22:00まで / 店頭在庫 残り5点</p>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="block line-through text-outline font-label-numeric-md text-body-sm">¥780</span>
+<span class="font-label-numeric-md text-label-numeric-md text-on-surface font-bold">¥546</span>
+<span class="text-label-caption text-on-surface-variant font-label-caption block">税抜</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<img class="w-16 h-16 rounded-lg object-cover flex-shrink-0" data-alt="Fresh round yellow Hokkaido onions piled neatly in a rustic wooden supermarket crate with paper price tags, soft supermarket morning lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR1JHRQCCIQtbVWb7qLWEARDPqfl3HwmdTc5Ozc5DkN-YGw_EpG6LCj1ooc4pQOdhjgpr7ju38NcG6D_GfdryJcm6OCokyNwzk0NhPJTrWMCQHgZT23qj6z1MqBHjAhLqrqzDgZ8fdt46lDKarkh5EBmorGl9HfE7OpX5jKn7dfHVJKj7xGfiiDnN06_az-kTDPzj1sgTR7DnKyniRRgcuAxW2yXJsGca5oVd204Ts"/>
+<div class="flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-0.5">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-badge text-label-caption font-bold">規格外特価</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-caption text-label-caption">2F 青果コーナー</span>
+</div>
+<p class="font-body-md text-body-md font-bold text-on-surface truncate">北海道産たまねぎ 1個</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">表面微キズあり（品質良好・完熟）</p>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="block line-through text-outline font-label-numeric-md text-body-sm">¥88</span>
+<span class="font-label-numeric-md text-label-numeric-md text-on-surface font-bold">¥58</span>
+<span class="text-label-caption text-on-surface-variant font-label-caption block">税抜</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<img class="w-16 h-16 rounded-lg object-cover flex-shrink-0" data-alt="Japanese bright red shredded pickled ginger beni shoga in a transparent retail seal packet on a clean supermarket display shelf." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAngc-eWh3VmSxscM8x5whHWW6sBdHRoFIE9HfkI2Nryf8PlU0e7UrEuKHbGjpnAjiNUP1cdOc7qYhj-CO62gA-tjnv9ecHVyolfT8ZRCZPiaiMNoGhQbPgTXR_H2rE-AyQl-4xDXkjA_KrOZ0tDin1CG0dIVFUhtz3gPzyQA1IPeA3o21Cf_GZzwm2Hq4c0HxEF1tPSwgia4RScy28Ac8YRpaZOLbUjqzo03QUr-8p"/>
+<div class="flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-0.5">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface font-label-caption text-label-caption font-medium">定番添え物</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-caption text-label-caption">1F 漬物・惣菜コーナー</span>
+</div>
+<p class="font-body-md text-body-md font-bold text-on-surface truncate">刻み紅生姜 1パック (60g)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">牛丼を劇的においしく引き立てるアクセント</p>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-label-numeric-md text-label-numeric-md text-on-surface font-bold">¥98</span>
+<span class="text-label-caption text-on-surface-variant font-label-caption block">税抜</span>
+</div>
+</div>
+</div>
+<!-- Price Calculation Summary -->
+<div class="mt-space-md pt-space-sm bg-surface-container-low/30 rounded-lg p-space-sm space-y-space-xs">
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>対象3点 単品通常合計</span>
+<span class="line-through">¥966 (税抜)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface">
+<span>見切り・特価適用後 合計</span>
+<span class="font-label-numeric-md font-bold">¥702 (税抜)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm text-secondary font-medium">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">local_offer</span>
+<span>レシピセットまとめ買い割引</span>
+</span>
+<span class="font-label-numeric-md font-bold">-¥100</span>
+</div>
+<div class="h-px bg-outline-variant/40 my-space-xs"></div>
+<div class="flex justify-between items-baseline pt-space-xs">
+<div>
+<span class="font-headline-md text-headline-md text-on-surface">クーポン適用後 目安価格</span>
+<span class="text-label-caption text-on-surface-variant block">※店頭レジにて精算（参考税込: ¥650）</span>
+</div>
+<div class="text-right">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">¥602</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-1 font-normal">（税抜）</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Warnings, Rules & Action (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Critical Notice Card (Strict In-Store Rule) -->
+<div class="bg-surface-container-highest rounded-xl p-space-md shadow-sm">
+<div class="flex items-start gap-space-sm mb-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px] flex-shrink-0">warning</span>
+<div>
+<h3 class="font-headline-md text-body-lg font-bold text-on-secondary-container">
+                【重要】本サービスはお取り置き・商品確保サービスではありません
+              </h3>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-0.5">
+                店頭の食品ロス低減のためのセルフお買い物支援システムです
+              </p>
+</div>
+</div>
+<div class="space-y-space-xs text-body-sm font-body-sm text-on-surface">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px] flex-shrink-0 mt-0.5">check_circle</span>
+<p><strong>クーポンの取得では、商品の在庫は確保・予約されません。</strong></p>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px] flex-shrink-0 mt-0.5">check_circle</span>
+<p>店内の売り場でご自身で商品をカゴに入れ、通常のお会計時にレジにてバーコードを提示してください。</p>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px] flex-shrink-0 mt-0.5">check_circle</span>
+<p>実店舗の在庫状況は流動的なため、<strong>売り場への移動中に売り切れとなる場合がございます</strong>。あらかじめご了承ください。</p>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px] flex-shrink-0 mt-0.5">check_circle</span>
+<p>基本調味料（醤油、みりん、酒、砂糖など）はご家庭の調味料をご利用いただく想定のため、セット割引対象商品には含まれません。</p>
+</div>
+</div>
+<!-- Micro In-store Flow Visual -->
+<div class="mt-space-md p-space-sm bg-surface-container-lowest rounded-lg">
+<p class="font-label-badge text-label-badge text-on-surface-variant mb-space-xs">店舗でのお買い物ステップ</p>
+<div class="grid grid-cols-3 gap-space-xs text-center">
+<div class="p-space-xs rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[20px] block mx-auto">touch_app</span>
+<span class="font-label-caption text-label-caption block font-bold mt-1">1. クーポン保存</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[20px] block mx-auto">shopping_cart</span>
+<span class="font-label-caption text-label-caption block font-bold mt-1">2. 売り場で選ぶ</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[20px] block mx-auto">qr_code_scanner</span>
+<span class="font-label-caption text-label-caption block font-bold mt-1">3. レジで提示</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recipe Cooking Reference Quick Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[22px]">restaurant</span>
+<div>
+<p class="font-headline-md text-body-md text-on-surface">調理の目安: 絶品おうち牛丼</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">調理時間 15分 / 2人前 / 難易度 かんたん</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+            クーポン取得完了後、いつでも「AIレシピ」タブから詳しい作り方手順と火加減のコツを確認できます。
+          </p>
+</div>
+<!-- Primary Action Area -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<!-- Main CTA Button -->
+<button class="w-full py-space-md px-space-lg rounded-xl bg-secondary-container hover:bg-secondary text-on-secondary font-headline-md text-body-lg font-bold flex items-center justify-center gap-space-xs shadow-md transition-all active:scale-[0.99] cursor-pointer" id="claim-coupon-btn">
+<span class="material-symbols-outlined text-[24px]">bookmark_add</span>
+<span>このクーポンを取得してマイクーポンへ保存する</span>
+</button>
+<!-- Acquisition Success Feedback Banner (Hidden initially) -->
+<div class="hidden p-space-md rounded-xl bg-primary-container text-on-primary-container" id="success-message">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-[22px]">check_circle</span>
+<span class="font-headline-md text-body-md font-bold">クーポンをマイクーポンに保存しました！</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container/90 mb-space-sm">
+              ライフ 渋谷桜丘店のレジにて「マイクーポン」のバーコードをご提示ください。
+            </p>
+<div class="flex gap-space-xs">
+<a class="flex-1 text-center py-2 px-space-sm rounded-lg bg-surface-container-lowest text-primary font-body-sm text-body-sm font-bold shadow-sm hover:bg-surface-container-low transition-colors" data-path="my-coupons" href="#">
+                マイクーポンを開く
+              </a>
+<a class="flex-1 text-center py-2 px-space-sm rounded-lg bg-primary-fixed text-on-primary-fixed font-body-sm text-body-sm font-bold hover:bg-primary-fixed-dim transition-colors" data-path="ai-recipes" href="#">
+                レシピ詳細を見る
+              </a>
+</div>
+</div>
+<!-- Secondary Link -->
+<div class="text-center pt-space-xs">
+<a class="inline-flex items-center gap-1 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors" data-path="c05-recipe-set-detail" href="#">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>レシピ詳細に戻って食材を変更する</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Additional Trust Footnote -->
+<div class="mt-space-lg py-space-sm px-space-md bg-surface-container-low/50 rounded-lg flex items-center justify-between text-label-caption text-on-surface-variant">
+<span>※クーポンの重複取得・転売は固くお断りいたします。1回のお会計につき1回のみ有効です。</span>
+<span class="font-label-numeric-md">Food Rescue System ver 2.4.0</span>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for claiming coupon
+  const claimBtn = document.getElementById('claim-coupon-btn');
+  const successMsg = document.getElementById('success-message');
+
+  if (claimBtn && successMsg) {
+    claimBtn.addEventListener('click', function() {
+      // Visual feedback
+      this.classList.add('opacity-50', 'pointer-events-none');
+      this.innerHTML = '<span class="material-symbols-outlined animate-spin text-[22px]">progress_activity</span><span>処理中...</span>';
+      
+      setTimeout(function() {
+        claimBtn.classList.add('hidden');
+        successMsg.classList.remove('hidden');
+      }, 500);
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-low text-on-surface-variant mt-space-xl"><div class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl"><div class="bg-surface-container-lowest rounded-xl p-space-md mb-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-secondary text-[22px] flex-shrink-0">info</span><div class="flex flex-col gap-space-xs"><p class="font-headline-md text-body-lg text-on-surface">ご利用ガイド（お買い物にあたってのお願い）</p><p class="font-body-sm text-body-sm text-on-surface-variant">Food Rescueは店頭での食品ロス削減を応援するアプリです。<strong>店舗で商品を選び、レジでクーポンをご提示ください。※予約・取り置き・事前決済サービスではありません。</strong> 店頭の在庫状況はリアルタイムで変動するため、売り切れの際はご容赦ください。</p></div></div></div><div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg mb-space-lg"><div class="space-y-space-xs"><div class="flex items-center gap-space-xs text-primary font-headline-md text-headline-md"><span class="material-symbols-outlined">eco</span><span>Food Rescue</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">スーパーの食品ロスをAIとテクノロジーでおいしく解決。地域とお店をつなぐサステナブルな買い物支援プラットフォームです。</p></div><div><p class="font-headline-md text-body-md text-on-surface mb-space-sm">サービス</p><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="hover:text-primary transition-colors" data-path="search-products" href="#">値引き食材・見切り品検索</a></li><li><a class="hover:text-primary transition-colors" data-path="ai-recipes" href="#">食品ロス削減AIレシピ</a></li><li><a class="hover:text-primary transition-colors" data-path="my-coupons" href="#">レジ提示用マイクーポン</a></li></ul></div><div><p class="font-headline-md text-body-md text-on-surface mb-space-sm">インフォメーション</p><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="hover:text-primary transition-colors" data-path="eco-initiatives" href="#">食品ロス削減への取り組み</a></li><li><a class="hover:text-primary transition-colors" data-path="shopping-guide" href="#">ご利用ガイド・店頭ルール</a></li><li><a class="hover:text-primary transition-colors" data-path="company-overview" href="#">会社概要</a></li><li><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">プライバシーポリシー</a></li></ul></div><div><p class="font-headline-md text-body-md text-on-surface mb-space-sm">加盟店・パートナー</p><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="flex items-center gap-space-xs text-primary hover:text-primary-container transition-colors font-medium" data-path="store-staff-login" href="#"><span class="material-symbols-outlined text-[16px]">lock</span><span>店舗スタッフログイン</span></a></li><li><a class="hover:text-primary transition-colors" data-path="store-registration-inquiry" href="#">新規加盟スーパーのお問い合わせ</a></li></ul></div></div><div class="pt-space-md border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm"><p>© 2025 Food Rescue Japan. All rights reserved.</p><p class="text-label-caption text-on-surface-variant">本サービスは店頭購買支援専用です（オンライン決済・事前取り置き不可）</p></div></div></footer></body></html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed-variant":"#783200","on-background":"#111c2d","secondary":"#9d4300","surface-container":"#e7eeff","on-secondary-container":"#5c2400","on-primary-fixed":"#002114","error":"#ba1a1a","error-container":"#ffdad6","tertiary":"#006947","surface-dim":"#cfdaf2","surface":"#f9f9ff","on-primary":"#ffffff","on-surface":"#111c2d","tertiary-container":"#00855b","inverse-primary":"#68dba9","on-primary-fixed-variant":"#005137","on-tertiary-container":"#f5fff6","on-surface-variant":"#3d4a42","surface-variant":"#d8e3fb","outline-variant":"#bccac0","tertiary-fixed-dim":"#4edea3","surface-bright":"#f9f9ff","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#005236","surface-container-lowest":"#ffffff","primary":"#006948","primary-container":"#00855d","secondary-container":"#fd761a","on-secondary":"#ffffff","secondary-fixed-dim":"#ffb690","inverse-surface":"#263143","on-secondary-fixed":"#341100","surface-container-highest":"#d8e3fb","inverse-on-surface":"#ecf1ff","primary-fixed-dim":"#68dba9","background":"#f9f9ff","on-error-container":"#93000a","surface-container-high":"#dee8ff","outline":"#6d7a72","secondary-fixed":"#ffdbca","tertiary-fixed":"#6ffbbe","on-tertiary-fixed":"#002113","primary-fixed":"#85f8c4","surface-container-low":"#f0f3ff","on-error":"#ffffff","on-primary-container":"#f5fff7","surface-tint":"#006c4a"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xs":"0.25rem","gutter-mobile":"0.75rem","space-xl":"2.5rem",margin:"1.5rem","space-lg":"1.5rem",gutter:"1rem","margin-mobile":"1rem","space-sm":"0.5rem","space-md":"1rem"},fontFamily:{"body-lg":["Noto Sans"],"body-sm":["Noto Sans"],"headline-lg":["Noto Sans"],"headline-lg-mobile":["Noto Sans"],"headline-md":["Noto Sans"],"label-badge":["Noto Sans"],"label-numeric-lg":["Inter"],"body-md":["Noto Sans"],"label-caption":["Noto Sans"],"headline-xl":["Noto Sans"],"label-numeric-md":["Inter"],"headline-xl-mobile":["Noto Sans"]},fontSize:{"body-lg":["16px",{lineHeight:"24px",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",fontWeight:"700"}],"headline-lg-mobile":["20px",{lineHeight:"28px",fontWeight:"700"}],"headline-md":["18px",{lineHeight:"26px",fontWeight:"700"}],"label-badge":["11px",{lineHeight:"14px",fontWeight:"700"}],"label-numeric-lg":["22px",{lineHeight:"28px",fontWeight:"700"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-caption":["10px",{lineHeight:"14px",fontWeight:"500"}],"headline-xl":["32px",{lineHeight:"40px",fontWeight:"700"}],"label-numeric-md":["16px",{lineHeight:"20px",fontWeight:"700"}],"headline-xl-mobile":["26px",{lineHeight:"34px",fontWeight:"700"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="p-space-md bg-surface-container-low"><div class="flex items-center gap-space-sm mb-space-xs"><span class="material-symbols-outlined text-primary text-[24px]">eco</span><span class="font-headline-md text-headline-md text-on-surface">Food Rescue 店舗管理</span></div><div class="flex items-center justify-between mt-space-xs bg-surface-container-lowest px-space-sm py-space-xs rounded-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">storefront</span><span class="font-body-sm text-body-sm text-on-surface font-bold">ライフ 渋谷桜丘店</span></div><span class="font-label-badge text-label-badge bg-primary text-on-primary px-space-xs py-0.5 rounded">直営</span></div></div><nav class="p-space-md flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-bold rounded-xl" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>ダッシュボード</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="product-catalog" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>商品マスター</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lots-and-in-store-stock" href="#"><span class="material-symbols-outlined text-[20px]">shelves</span><span>ロット・在庫管理</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="coupon-management" href="#"><span class="material-symbols-outlined text-[20px]">sell</span><span>クーポン管理</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="pos-register-check" href="#"><span class="material-symbols-outlined text-[20px]">qr_code_scanner</span><span>レジ利用確認</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="store-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>店舗設定・スタッフ</span></a></nav></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm bg-surface-container-lowest p-space-sm rounded-xl"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-body-sm text-body-sm text-on-surface font-bold truncate">田中 健一</span><span class="font-label-caption text-label-caption text-on-surface-variant truncate">店長・店舗管理者</span></div></div><div class="flex items-center gap-space-xs"><a class="flex-1 flex items-center justify-center gap-space-xs py-space-xs px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface text-body-sm font-body-sm transition-colors" data-path="switch-store" href="#"><span class="material-symbols-outlined text-[16px]">sync_alt</span><span>店舗切替</span></a><a class="flex-1 flex items-center justify-center gap-space-xs py-space-xs px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface text-body-sm font-body-sm transition-colors" data-path="customer-app" href="#"><span class="material-symbols-outlined text-[16px]">open_in_new</span><span>お客様画面</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><span class="font-bold text-on-surface">ライフ 渋谷桜丘店</span><span class="text-outline">/</span><span>店舗管理コンソール</span></div><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-space-xs rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-badge text-label-badge text-on-surface-variant">POS連携: オンライン (同期中) 最終更新 18:45</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-lowest text-on-surface font-label-badge text-label-badge"><span class="material-symbols-outlined text-primary text-[16px]">schedule</span><span>営業中 9:30 - 23:00</span></div><button class="relative p-space-xs rounded-full hover:bg-surface-container transition-colors text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span></button><button class="flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary px-space-md py-space-xs rounded-xl font-body-sm text-body-sm font-bold shadow-[0_2px_8px_rgba(0,105,72,0.2)] transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">add_circle</span><span>+ 見切り品・ロット登録</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg flex flex-col gap-space-lg max-w-[1600px] mx-auto w-full">
+<!-- Store Welcome & Command Strip -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-lg text-headline-lg text-on-surface">店舗オペレーション司令塔</span>
+<span class="font-label-badge text-label-badge bg-surface-container-high text-on-surface-variant px-space-sm py-0.5 rounded-full">店番: LF-094</span>
+<span class="font-label-badge text-label-badge bg-secondary-fixed text-on-secondary-fixed-variant px-space-sm py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>デモデータ表示中
+          </span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span>
+            2025年10月24日 (金) 18:45 現在
+          </span>
+<span class="text-outline-variant">|</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">wb_cloudy</span>
+            天候: 曇り (19℃) / 夕刻ピーク中
+          </span>
+<span class="text-outline-variant">|</span>
+<span class="text-primary font-bold">店頭セルフピックアップ運用モード</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap shrink-0">
+<button class="flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-space-sm rounded-xl font-body-sm text-body-sm font-bold transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">sell</span>
+<span>+ クーポン発行</span>
+</button>
+<button class="flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-space-sm rounded-xl font-body-sm text-body-sm font-bold transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">qr_code_scanner</span>
+<span>POS利用手動確認</span>
+</button>
+<button class="flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary px-space-md py-space-sm rounded-xl font-body-sm text-body-sm font-bold shadow-md hover:shadow-lg transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ 新規ロット・見切り登録</span>
+</button>
+</div>
+</div>
+<!-- Core KPI Grid (4 Metrics) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1: Active Rescue Stock -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-surface-container-low rounded-full opacity-60 pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-bold">出品中レスキュー品</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</div>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">142</span>
+<span class="font-body-md text-body-md text-on-surface-variant">品</span>
+<span class="ml-auto font-label-badge text-label-badge bg-primary-fixed text-on-primary-fixed px-space-xs py-0.5 rounded flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>前日比 +12%
+          </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-caption text-label-caption pt-space-xs">
+<span>陳列棚セルフピック対象</span>
+<span class="text-primary font-bold">稼働率 94%</span>
+</div>
+</div>
+<!-- KPI 2: Today's Expiring Lots -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden border-l-4 border-error group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-bold">本日消費期限・要対応</span>
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">priority_high</span>
+</div>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-error font-bold">28</span>
+<span class="font-body-md text-body-md text-error">品</span>
+<span class="ml-auto font-label-badge text-label-badge bg-error-container text-on-error-container px-space-xs py-0.5 rounded">早急な確認推奨</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-caption text-label-caption pt-space-xs">
+<span class="bg-surface-container px-1.5 py-0.5 rounded">精肉 12</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded">日配 9</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded">青果 7</span>
+</div>
+</div>
+<!-- KPI 3: Register Coupon Usage -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-bold">クーポン発行 / レジ利用率</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</div>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">26.4</span>
+<span class="font-body-md text-body-md text-on-surface-variant">%</span>
+<span class="ml-auto text-on-surface-variant font-body-sm text-body-sm">
+<b class="text-primary font-bold">84</b> / 318件
+          </span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 26.4%"></div>
+</div>
+</div>
+<!-- KPI 4: Food Loss Reduced & CO2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-bold">本日食品ロス削減実績</span>
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[20px]">compost</span>
+</div>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">42.6</span>
+<span class="font-body-md text-body-md text-on-surface-variant">kg</span>
+<span class="ml-auto font-label-badge text-label-badge bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">
+            CO₂換算 約128kg
+          </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-caption text-label-caption pt-space-xs">
+<span>目標達成度: 85.2kg / 日</span>
+<span class="text-primary font-bold">進行度 50%</span>
+</div>
+</div>
+</div>
+<!-- Main 2-Column Work Area -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column (65% -> 8 of 12 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Urgent Action Lots Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">alarm</span>
+<span class="font-headline-md text-headline-md text-on-surface">期限間近・早急な対応が必要な店頭ロット</span>
+</div>
+<a class="text-primary hover:text-primary-container font-body-sm text-body-sm font-bold flex items-center gap-0.5" href="#">
+<span>ロット一覧 (全28件)</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">
+            店頭棚札の割引シール更新および「AIレシピセット割」への追加プッシュが可能な最優先アイテムです。
+          </div>
+<!-- Items Table/Card Flow -->
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1: Beef -->
+<div class="bg-surface p-space-md rounded-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md hover:bg-surface-container-low transition-colors shadow-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-16 h-16 rounded-lg bg-surface-container-high shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Fresh thinly sliced Japanese domestic beef chuck roll pack displayed on clean butcher tray under crisp bright supermarket lighting, marbling clearly visible, natural fresh red tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNT96XaVktS2GzF-s9BZokUgc8tRlleBvIZQB2HhBEKbDo52Z_JmZNy09nAEvZmm1Nl6zBsQzSNBwt-yeUmxPv96DSl-VNbIaVDKG9ZdgM416BU7tNMNzaUmyFMRcVclNX_ey7NKcsGZLt2l4Mhmw8eoUcqMfqpq2rU6AzY0OWHZVAoe0q36prEftCB0hOYHUT2e6YrlmTmpyLDORJqjkMT7Wf7FCIQxiu3fiOrZ94"/>
+<span class="absolute top-1 left-1 bg-secondary text-on-secondary font-label-badge text-[10px] px-1 rounded font-bold">-30%</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-body-md text-body-md text-on-surface font-bold truncate">国産牛肩ローススライス 250g</span>
+<span class="font-label-badge text-label-badge bg-surface-container px-space-xs py-0.5 rounded text-on-surface-variant">精肉 (棚A-04)</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+<span class="text-error font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span>本日21:00まで
+                    </span>
+<span>店頭残: <b class="text-on-surface font-bold">3パック</b></span>
+<span class="line-through text-outline">¥1,180</span>
+<span class="text-secondary font-bold text-headline-md">¥826</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs w-full md:w-auto justify-end shrink-0 pt-space-xs md:pt-0">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-bold transition-colors" type="button">
+                  価格変更
+                </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-body-sm text-body-sm font-bold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">soup_kitchen</span>
+<span>レシピ連動</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-bold hover:bg-primary-container transition-colors" type="button">
+                  確認済
+                </button>
+</div>
+</div>
+<!-- Item 2: Sea Bream -->
+<div class="bg-surface p-space-md rounded-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md hover:bg-surface-container-low transition-colors shadow-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-16 h-16 rounded-lg bg-surface-container-high shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Fresh glistening sea bream sashimi block fillet on white tray inside clean supermarket fresh seafood section, subtle herb garnish and chilled ice atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdc9T4nzPqaIVHgE4yxlVp6M3tRU45Nff5YsaeeUAQFvt2mWcDKdB_7YKM8gkr0zNLSBUSGaUOSahu-1qD2__7tAhkpv5zzjkiNQ36qJzJNB72gqMO_N08tPunernkQ2ycK6_xqhNcJDVeFaMrazaLNzMe9etGtn5dfG0lNjAkOwVS0AZnRnx0vC-vCJOEe8KsqApwzZWltQ_pR-WTOZ-0LoijSYiyHAq9PUK_lswb"/>
+<span class="absolute top-1 left-1 bg-secondary text-on-secondary font-label-badge text-[10px] px-1 rounded font-bold">-40%</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-body-md text-body-md text-on-surface font-bold truncate">鮮魚 愛媛県産 真鯛のサク 180g</span>
+<span class="font-label-badge text-label-badge bg-surface-container px-space-xs py-0.5 rounded text-on-surface-variant">鮮魚 (冷ケースC-02)</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+<span class="text-error font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span>本日20:00まで
+                    </span>
+<span>店頭残: <b class="text-on-surface font-bold">2パック</b></span>
+<span class="line-through text-outline">¥880</span>
+<span class="text-secondary font-bold text-headline-md">¥528</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs w-full md:w-auto justify-end shrink-0 pt-space-xs md:pt-0">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-bold transition-colors" type="button">
+                  価格変更
+                </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-body-sm text-body-sm font-bold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">soup_kitchen</span>
+<span>レシピ連動</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-bold hover:bg-primary-container transition-colors" type="button">
+                  確認済
+                </button>
+</div>
+</div>
+<!-- Item 3: Onions (Imperfect) -->
+<div class="bg-surface p-space-md rounded-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md hover:bg-surface-container-low transition-colors shadow-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-16 h-16 rounded-lg bg-surface-container-high shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Hokkaido harvested yellow round onions grouped in natural rustic wooden crate at organic eco grocery corner, natural morning daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzXHcqBMeeM5sBZDb6yJh4lQsD4IzG2g-L80g_uXmlWDkmFQt0oRvH1jhOL8owj-qE01WdboPmbY5Tszpu6wCaRp-VjpqdukaWTesR4dmq7GcD2fA91uDrKaFWG4AzX016q1znZ-xwQSo1ae1IqNoi1OlvJJWcAlMDswHIVINSZm17WDVXA5nspSzb-d8qlj4hu-t24B--gPOOioVdcFI-wiYXLOL5NHupdbKJ2vQe"/>
+<span class="absolute top-1 left-1 bg-tertiary text-on-tertiary font-label-badge text-[10px] px-1 rounded font-bold">規格外品</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-body-md text-body-md text-on-surface font-bold truncate">北海道産 たまねぎ 1個バラ</span>
+<span class="font-label-badge text-label-badge bg-surface-container px-space-xs py-0.5 rounded text-on-surface-variant">青果 (平台01)</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+<span class="text-on-surface-variant font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">today</span>本日中推奨
+                    </span>
+<span>店頭残: <b class="text-on-surface font-bold">8個</b></span>
+<span class="line-through text-outline">¥78</span>
+<span class="text-primary font-bold text-headline-md">¥45</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs w-full md:w-auto justify-end shrink-0 pt-space-xs md:pt-0">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-bold transition-colors" type="button">
+                  価格変更
+                </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-body-sm text-body-sm font-bold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">soup_kitchen</span>
+<span>レシピ連動</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-bold hover:bg-primary-container transition-colors" type="button">
+                  確認済
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-Time Register Coupon Usage Log -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-headline-md text-headline-md text-on-surface">直近の店頭レジクーポン利用動向</span>
+<span class="font-label-badge text-label-badge bg-surface-container px-space-xs py-0.5 rounded text-on-surface-variant">リアルタイム受信</span>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface-variant">店頭バーコードスキャン実績</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-md">
+<span class="font-label-numeric-md text-label-numeric-md text-outline font-bold">18:42</span>
+<span class="font-label-badge text-label-badge bg-surface-container px-2 py-1 rounded font-bold text-on-surface">レジ 02 (セルフレジ)</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-bold">絶品おうち牛丼セット割 (-¥100)</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">対象: 国産牛肩ロース + 玉ねぎ + 紅生姜</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded font-bold">割引適用済</span>
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-md">
+<span class="font-label-numeric-md text-label-numeric-md text-outline font-bold">18:35</span>
+<span class="font-label-badge text-label-badge bg-surface-container px-2 py-1 rounded font-bold text-on-surface">レジ 05 (有人レジ)</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-bold">具だくさん豚汁セット割 (-¥80)</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">対象: 国産豚バラ切り落とし + ごぼう</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded font-bold">割引適用済</span>
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-md">
+<span class="font-label-numeric-md text-label-numeric-md text-outline font-bold">18:18</span>
+<span class="font-label-badge text-label-badge bg-surface-container px-2 py-1 rounded font-bold text-on-surface">レジ 01 (セルフレジ)</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-bold">絶品おうち牛丼セット割 (-¥100)</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">対象: 国産牛肩ロース + 玉ねぎ</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded font-bold">割引適用済</span>
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-md">
+<span class="font-label-numeric-md text-label-numeric-md text-outline font-bold">17:54</span>
+<span class="font-label-badge text-label-badge bg-surface-container px-2 py-1 rounded font-bold text-on-surface">レジ 04 (セルフレジ)</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-bold">夕方レスキュー青果単品クーポン (-¥30)</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">対象: カットキャベツ</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded font-bold">割引適用済</span>
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs text-center">
+<button class="text-primary hover:text-primary-container font-body-sm text-body-sm font-bold flex items-center justify-center gap-1 mx-auto" type="button">
+<span>すべてのPOS利用ログを閲覧 (本日全84件)</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Column (35% -> 4 of 12 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Recipe Synergy Ranking -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">auto_awesome</span>
+<span class="font-headline-md text-headline-md text-on-surface">人気AIレシピ連動</span>
+</div>
+<span class="font-label-badge text-label-badge bg-primary-fixed text-on-primary-fixed px-space-xs py-0.5 rounded">本日集計</span>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">
+            店頭見切り品と通常棚商品のまとめ買いを促進するセット割クーポンの利用上位ランキングです。
+          </div>
+<div class="flex flex-col gap-space-md pt-space-xs">
+<!-- Rank 1 -->
+<div class="flex flex-col gap-space-xs bg-surface p-space-md rounded-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-secondary text-on-secondary font-label-badge text-center leading-5 font-bold">1</span>
+<span class="font-body-md text-body-md text-on-surface font-bold">絶品おうち牛丼セット</span>
+</div>
+<span class="font-label-numeric-md text-label-numeric-md text-secondary font-bold">利用率 42%</span>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">
+                牛肉スライス（見切り）+ 玉ねぎ + つゆ
+              </div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full rounded-full" style="width: 42%"></div>
+</div>
+<span class="font-label-caption text-label-caption text-outline">本日レジ適用: 35件 / 関連売上推計 ¥41,200</span>
+</div>
+<!-- Rank 2 -->
+<div class="flex flex-col gap-space-xs bg-surface p-space-md rounded-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-badge text-center leading-5 font-bold">2</span>
+<span class="font-body-md text-body-md text-on-surface font-bold">ヘルシー具だくさん豚汁</span>
+</div>
+<span class="font-label-numeric-md text-label-numeric-md text-primary font-bold">利用率 28%</span>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">
+                豚コマ（見切り）+ ごぼう + こんにゃく
+              </div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-primary h-full rounded-full" style="width: 28%"></div>
+</div>
+<span class="font-label-caption text-label-caption text-outline">本日レジ適用: 24件 / 関連売上推計 ¥22,800</span>
+</div>
+<!-- Rank 3 -->
+<div class="flex flex-col gap-space-xs bg-surface p-space-md rounded-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-badge text-center leading-5 font-bold">3</span>
+<span class="font-body-md text-body-md text-on-surface font-bold">贅沢すき焼き風煮込み</span>
+</div>
+<span class="font-label-numeric-md text-label-numeric-md text-on-surface font-bold">利用率 18%</span>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">
+                牛肉肩ロース + 焼き豆腐 + 白ネギ
+              </div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-outline h-full rounded-full" style="width: 18%"></div>
+</div>
+<span class="font-label-caption text-label-caption text-outline">本日レジ適用: 15件 / 関連売上推計 ¥19,400</span>
+</div>
+</div>
+</div>
+<!-- POS & System Status Panel -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">dns</span>
+<span class="font-headline-md text-headline-md text-on-surface">システム連携ステータス</span>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between p-space-sm bg-surface rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">point_of_sale</span>
+<span class="font-body-sm text-body-sm text-on-surface">POSレジ端末連携</span>
+</div>
+<span class="font-label-badge text-label-badge bg-primary-fixed text-on-primary-fixed px-space-xs py-0.5 rounded font-bold">
+                8台中 8台 正常稼働
+              </span>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">sync</span>
+<span class="font-body-sm text-body-sm text-on-surface">最終在庫自動同期</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-bold">
+                18:40 (5分前)
+              </span>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">trending_up</span>
+<span class="font-body-sm text-body-sm text-on-surface">夕方ピーク来店予測</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-bold">
+                +15% (通常金曜比)
+              </span>
+</div>
+</div>
+<!-- Quick Tip for Staff -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">tips_and_updates</span>
+<span class="font-label-caption text-label-caption leading-relaxed">
+              19:00前後に精肉・鮮魚コーナーの集中見切りシール更新を推奨します。連動クーポンが即時にお客様アプリ側へ配信されます。
+            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

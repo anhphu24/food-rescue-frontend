@@ -1,0 +1,585 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Food Rescue - 食品ロス削減システム</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-container":"#f5fff7","tertiary-fixed":"#6ffbbe","secondary-container":"#fd761a","primary-fixed-dim":"#68dba9","on-surface-variant":"#3d4a42","inverse-on-surface":"#ecf1ff","outline-variant":"#bccac0","surface-container":"#e7eeff","primary":"#006948","on-surface":"#111c2d","on-tertiary-fixed-variant":"#005236","surface":"#f9f9ff","tertiary-fixed-dim":"#4edea3","on-primary-fixed-variant":"#005137","surface-tint":"#006c4a","surface-dim":"#cfdaf2","secondary":"#9d4300","surface-container-lowest":"#ffffff","on-primary-fixed":"#002114","surface-container-low":"#f0f3ff","on-secondary-fixed-variant":"#783200","surface-container-high":"#dee8ff","on-secondary-container":"#5c2400","secondary-fixed":"#ffdbca","background":"#f9f9ff","on-error-container":"#93000a","on-secondary-fixed":"#341100","on-primary":"#ffffff","on-secondary":"#ffffff","error-container":"#ffdad6","on-tertiary-container":"#f5fff6","tertiary":"#006947","outline":"#6d7a72","on-tertiary-fixed":"#002113","primary-container":"#00855d","surface-variant":"#d8e3fb","on-tertiary":"#ffffff","surface-bright":"#f9f9ff","surface-container-highest":"#d8e3fb","inverse-surface":"#263143","tertiary-container":"#00855b","primary-fixed":"#85f8c4","secondary-fixed-dim":"#ffb690","inverse-primary":"#68dba9","on-error":"#ffffff","error":"#ba1a1a","on-background":"#111c2d"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-mobile":"1rem","space-xs":"0.25rem","space-sm":"0.5rem",gutter:"1rem","gutter-mobile":"0.75rem",margin:"1.5rem","space-lg":"1.5rem","space-xl":"2.5rem","space-md":"1rem"},fontFamily:{"body-md":["Noto Sans"],"label-numeric-md":["Inter"],"label-numeric-lg":["Inter"],"headline-lg":["Noto Sans"],"headline-xl-mobile":["Noto Sans"],"body-sm":["Noto Sans"],"headline-xl":["Noto Sans"],"body-lg":["Noto Sans"],"label-caption":["Noto Sans"],"headline-md":["Noto Sans"],"label-badge":["Noto Sans"],"headline-lg-mobile":["Noto Sans"]},fontSize:{"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-numeric-md":["16px",{lineHeight:"20px",fontWeight:"700"}],"label-numeric-lg":["22px",{lineHeight:"28px",fontWeight:"700"}],"headline-lg":["24px",{lineHeight:"32px",fontWeight:"700"}],"headline-xl-mobile":["26px",{lineHeight:"34px",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"headline-xl":["32px",{lineHeight:"40px",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"500"}],"label-caption":["10px",{lineHeight:"14px",fontWeight:"500"}],"headline-md":["18px",{lineHeight:"26px",fontWeight:"700"}],"label-badge":["11px",{lineHeight:"14px",fontWeight:"700"}],"headline-lg-mobile":["20px",{lineHeight:"28px",fontWeight:"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="Food Rescue Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlsn4_3t_7oZW1pfzbgEyyS0_e-3W_Dgh9EqnYSjhdJSdT8KdvBVqwrykznUPIglB7T62ZFktb50RJEx1Xz9fbCRSTG98l6gLl4WqPVgeyC-7RPMoQ-WYkxc5nXLQy4MAiSxhnSf07VfetpHp5YAHs12IRqiUARALGiiV-iLrFa0efzolOlwEo-pfr6wpppQd6t-sHltjzgC8JL4wHgeebaIp6p61hbYW43_pjgdIm"><span class="font-headline-md text-headline-md text-primary tracking-tight">Food Rescue</span></a><button class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface transition-colors cursor-pointer" type="button" onclick="document.getElementById('store-change-modal').classList.remove('hidden')"><span class="material-symbols-outlined text-[18px] text-primary">storefront</span><span class="font-body-sm text-body-sm font-medium">ライフ 渋谷桜丘店</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></button></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg"><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="home" href="#">ホーム</a><a aria-current="page" class="px-space-md py-space-xs transition-colors bg-primary-container text-on-primary-container font-bold rounded-lg" data-path="search-products" href="#">食材を探す</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="ai-recipes" href="#">AIレシピ</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="my-coupons" href="#">マイクーポン</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="my-page" href="#">マイページ</a></nav><div class="flex items-center gap-space-sm"><a class="hidden md:inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors font-body-sm text-body-sm" data-path="store-admin-dashboard" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">badge</span><span>店舗管理システムへ (スタッフ用)</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full"><section class="w-full bg-surface-container border-t border-outline-variant/30 py-space-sm shadow-sm"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col md:flex-row md:items-center justify-between gap-space-sm"><div class="flex flex-col sm:flex-row sm:items-center gap-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[22px]" style="font-variation-settings: 'FILL' 1;">location_on</span><span class="font-headline-md text-body-md text-on-surface font-bold">選択中の店舗: ライフ 渋谷桜丘店（直営）</span><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-badge text-label-badge">同一店舗購入対応</span></div><button class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-variant font-body-sm text-body-sm font-bold shadow-sm flex items-center gap-1 transition-colors self-start sm:self-auto cursor-pointer" onclick="document.getElementById('store-change-modal').classList.remove('hidden')" type="button"><span class="material-symbols-outlined text-[16px]">swap_horiz</span><span>店舗を変更する</span></button></div><div class="flex items-center gap-space-sm flex-wrap"><button class="flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-body-sm text-body-sm font-medium transition-colors cursor-pointer" onclick="const p=document.getElementById('other-stores-preview');p.classList.toggle('hidden')" type="button"><span class="material-symbols-outlined text-secondary text-[16px]">compare_arrows</span><span>他店状況プレビュー</span><span class="material-symbols-outlined text-[14px]">expand_more</span></button></div></div><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin mt-1"><p class="font-label-caption text-label-caption text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-primary flex-shrink-0">check_circle</span><span>※ 表示中の商品価格・見切り割引・在庫状況は<strong>【ライフ 渋谷桜丘店】の店頭限定情報</strong>です。別店舗の商品は混在していません（店舗間移動・他店受取不可）。</span></p></div><div class="hidden max-w-7xl mx-auto px-margin-mobile lg:px-margin mt-space-sm pt-space-xs border-t border-outline-variant/30" id="other-stores-preview"><div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm"><div class="flex items-center justify-between mb-space-xs"><span class="font-headline-md text-body-sm text-on-surface font-bold flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">store</span>近隣他店の牛肉・見切り品状況（リアルタイム参考）</span><span class="font-label-caption text-label-caption text-on-surface-variant">※他店舗の食材を選ぶ場合は店舗切替が必要です</span></div><div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm"><div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg"><div class="flex flex-col"><span class="font-body-sm text-body-sm font-bold text-on-surface">ライフ 恵比寿店</span><span class="font-label-caption text-label-caption text-on-surface-variant">牛肉レスキュー対象: 5件該当 (最大30%OFF)</span></div><span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-badge text-label-badge">本日21時まで</span></div><div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg"><div class="flex flex-col"><span class="font-body-sm text-body-sm font-bold text-on-surface">東急ストア 中目黒本店</span><span class="font-label-caption text-label-caption text-on-surface-variant">牛肉レスキュー対象: 3件該当 (最大25%OFF)</span></div><span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-badge text-label-badge">本日20時まで</span></div></div></div></div></section><div class="hidden fixed top-0 left-0 right-0 bottom-2 z-50 flex items-center justify-center bg-inverse-surface/50 backdrop-blur-sm p-space-md" id="store-change-modal"><div class="bg-surface-container-lowest max-w-md w-full rounded-2xl p-space-lg shadow-lg flex flex-col gap-space-md"><div class="flex items-start gap-space-sm"><div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary flex-shrink-0"><span class="material-symbols-outlined text-[22px]">warning</span></div><div class="flex flex-col"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">店舗の切り替え確認</h3><p class="font-body-sm text-body-sm text-on-surface-variant mt-1">店舗を変更すると、現在の食材選択やAIレシピ提案、取得済みクーポンの適用条件が再計算されます。変更しますか？</p></div></div><div class="bg-surface-container-low p-space-sm rounded-xl space-y-space-xs"><p class="font-label-caption text-label-caption text-secondary font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">info</span>取得済みクーポンへの影響案内</p><p class="font-label-caption text-label-caption text-on-surface-variant">※店舗限定クーポンは対象店舗でのみ有効です。別店舗に切り替えると対象外クーポンの適用は解除されます。※事前予約・取り置きはできません。</p></div><div class="flex flex-col gap-space-xs"><label class="font-body-sm text-body-sm font-bold text-on-surface">変更先の店舗を選択</label><div class="flex flex-col gap-1"><button class="w-full p-space-sm rounded-xl bg-primary-container text-on-primary-container font-body-sm text-body-sm font-bold text-left flex items-center justify-between" type="button"><span>ライフ 渋谷桜丘店（現在地・選択中）</span><span class="material-symbols-outlined text-[18px]">check</span></button><button class="w-full p-space-sm rounded-xl bg-surface-container hover:bg-surface-variant text-on-surface font-body-sm text-body-sm text-left flex items-center justify-between transition-colors" onclick="document.getElementById('store-change-modal').classList.add('hidden')" type="button"><span>ライフ 恵比寿店</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_forward</span></button><button class="w-full p-space-sm rounded-xl bg-surface-container hover:bg-surface-variant text-on-surface font-body-sm text-body-sm text-left flex items-center justify-between transition-colors" onclick="document.getElementById('store-change-modal').classList.add('hidden')" type="button"><span>東急ストア 中目黒本店</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_forward</span></button></div></div><div class="flex items-center justify-end gap-space-sm pt-space-xs"><button class="px-space-md py-2 rounded-xl bg-surface-container-highest hover:bg-surface-variant text-on-surface font-body-sm text-body-sm font-bold transition-colors" onclick="document.getElementById('store-change-modal').classList.add('hidden')" type="button">キャンセル</button></div></div></div>
+<!-- Top Control Bar & Live Filter Strip -->
+<section class="w-full bg-surface-container-low/70 py-space-md shadow-sm">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-md">
+<!-- Primary Search and Store Indicator -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<!-- Search Input with Live Query pre-filled -->
+<div class="relative flex-1 max-w-2xl">
+<label class="sr-only" for="ingredient-search">食材・商品名で検索</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-primary text-[22px]">search</span>
+<input class="w-full h-12 pl-12 pr-10 rounded-full bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all" id="ingredient-search" placeholder="売り場のお買い得食材・食品ロス対象品を検索" type="text" value="牛肉">
+<button aria-label="検索キーワード消去" class="absolute right-space-sm w-7 h-7 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-variant" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<!-- Store Selector Quick Context -->
+<div class="flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container-lowest shadow-sm self-start md:self-auto">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">storefront</span>
+<div class="flex flex-col">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase tracking-wider">現在のお買い物店舗</span>
+<span class="font-headline-md text-body-md text-on-surface flex items-center gap-1 font-bold">
+              ライフ 渋谷桜丘店
+              <span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Category Filter Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none">
+<button class="px-space-md py-2 rounded-full font-body-sm text-body-sm font-medium whitespace-nowrap bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors" type="button">
+          すべて (42)
+        </button>
+<button class="px-space-md py-2 rounded-full font-body-sm text-body-sm font-bold whitespace-nowrap bg-primary text-on-primary shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+          精肉・肉 (8)
+        </button>
+<button class="px-space-md py-2 rounded-full font-body-sm text-body-sm font-medium whitespace-nowrap bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors" type="button">
+          鮮魚・刺身 (12)
+        </button>
+<button class="px-space-md py-2 rounded-full font-body-sm text-body-sm font-medium whitespace-nowrap bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors" type="button">
+          青果・野菜・果物 (15)
+        </button>
+<button class="px-space-md py-2 rounded-full font-body-sm text-body-sm font-medium whitespace-nowrap bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors" type="button">
+          日配品・総菜 (7)
+        </button>
+</div>
+<!-- Sorting & Refinement Toolbar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs overflow-x-auto">
+<span class="font-label-caption text-label-caption text-on-surface-variant flex items-center gap-0.5 mr-1">
+<span class="material-symbols-outlined text-[14px]">tune</span>並び順:
+          </span>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-primary font-body-sm text-body-sm font-bold shadow-sm flex items-center gap-1" type="button">
+<span>割引率順</span>
+<span class="material-symbols-outlined text-[14px]">south</span>
+</button>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" type="button">
+            期限が近い順
+          </button>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" type="button">
+            価格の安い順
+          </button>
+</div>
+<!-- Filter Toggle Pill -->
+<label class="flex items-center gap-2 cursor-pointer select-none bg-surface-container-lowest px-space-sm py-1 rounded-lg shadow-sm">
+<input checked="" class="accent-primary w-4 h-4 rounded cursor-pointer" type="checkbox">
+<span class="font-body-sm text-body-sm font-medium text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+            見切り品・レスキュー対象のみ
+          </span>
+</label>
+</div>
+</div>
+</section>
+<!-- Interactive Search Guidance & Recipe Inspiration Banner -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-space-lg pb-space-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md p-space-md rounded-2xl bg-gradient-to-r from-primary/10 via-surface-container-lowest to-surface-container-low shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-on-primary text-[22px]">smart_toy</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">精肉・牛肉の検索結果</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-badge text-label-badge">8件該当</span>
+<span class="font-label-caption text-label-caption text-secondary font-bold bg-secondary-fixed px-2 py-0.5 rounded-full">値下げ見切り品多数</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            店頭の気になる食材を選ぶと、AIがその食材を主役にした時短・簡単レシピと買い足し食材をご提案します。
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant bg-surface-container-lowest/80 px-space-sm py-1.5 rounded-xl text-body-sm font-body-sm self-start md:self-center">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>売り場で商品をカゴに入れてレジへ</span>
+</div>
+</div>
+</section>
+<!-- Product Grid Section -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-md">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Product Card 1: Highlighted Eco Rescue Hero -->
+<article class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all group relative">
+<div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Packaged fresh Japanese beef shoulder loin sliced thinly in a clear supermarket tray on an eco-friendly light green background. High angle, clear marbled texture, glossy red meat with fine white fat lines, appetizing grocery store presentation under gentle soft studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLcokNwha89ZdgtQpsDr0VlNROccdOU2n3rp5Xc0WFSBNLnI1CXpgqk96syC6JSPoa5EuajGnvJ-8Yuopp3RXo3dGd7Ti4YbFNPL12cW2kAwFcJzYZ-oUqXpm6q9OQ5PQE4VSLPGRgJUB2FhTmp7gRHHca9i9J4PcFzkWLSZwpGvWNMuGeiL6jqy0HNGd0nLqWJiB3atxKh7IYpSs8vipEiPyaoKBHHcUGU9tJwflT">
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-2 py-0.5 rounded-md bg-secondary text-on-secondary font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">alarm</span>本日中
+            </span>
+<span class="px-2 py-0.5 rounded-md bg-primary text-on-primary font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">eco</span>レスキュー対象
+            </span>
+</div>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-primary-container px-2 py-1 rounded-lg font-label-numeric-md text-label-numeric-md shadow-md">
+            -30%
+          </div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded text-on-surface font-label-caption text-label-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">location_on</span>
+            1F 精肉コーナー奥 冷ケース
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div><div class="flex items-center gap-1 mb-1"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-caption text-label-caption font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">storefront</span>ライフ 渋谷桜丘店 限定価格・在庫</span></div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-caption text-label-caption text-secondary font-bold">国産黒毛和牛交雑種</span>
+<span class="font-label-caption text-label-caption text-error font-medium flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>残り3パック
+              </span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+              国産牛肩ローススライス 250g
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+              すき焼き、牛丼、肉野菜炒めに最適。適度なサシが入ったやわらか肉質。
+            </p>
+</div>
+<!-- Price & Expiry Strip -->
+<div class="pt-space-xs bg-surface-container-low/50 -mx-space-md px-space-md py-space-xs rounded-xl">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-body-sm text-body-sm text-outline line-through mr-1.5">¥780</span>
+<span class="font-label-numeric-lg text-headline-lg text-secondary font-bold">¥546</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">(税込 ¥589)</span>
+</div>
+<div class="text-right">
+<span class="font-label-caption text-label-caption text-secondary font-bold block">消費期限: 本日 21:00</span>
+</div>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant/80 mt-1">
+              店頭参考在庫: 約3パック ※お取り置きはできません
+            </p>
+</div>
+<!-- Recipe Trigger Action -->
+<a class="w-full mt-1 py-3 px-space-md rounded-xl bg-primary hover:bg-primary-container text-on-primary font-headline-md text-body-md font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.98]" data-path="ai-recipes" href="#">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>この食材でレシピを探す</span>
+</a>
+</div>
+</article>
+<!-- Product Card 2: Kokumagire Discount -->
+<article class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Packaged sliced beef offcuts in a foam grocery tray wrapped in transparent film, lean red pieces ideal for quick stir-fry, displayed in modern Japanese supermarket lighting, clean minimal background with soft green accent tint." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtWEP6gPAETQXIRge5-i1XUfTz7lKx0hVTGciwQUck9lkQuxPEIvh3A3j01tspO6P5NPLBcGpbXanuba4A75UJGEmnsfcwQHSdGk1qs2sYLlnsOcnsHJ8f5ioiu9UBep4fXXPDr2oH8TaAUtA90eeKJG9MtfFvNUvUKYqOHrJWZBlEVgP38Q-blloOKXTprZeOK8hi8RlWInx4X_Ra3SzTSS5XInX5z6f1swe5XQ7H">
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-2 py-0.5 rounded-md bg-secondary text-on-secondary font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">schedule</span>明日まで
+            </span>
+<span class="px-2 py-0.5 rounded-md bg-primary text-on-primary font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">eco</span>レスキュー対象
+            </span>
+</div>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-primary-container px-2 py-1 rounded-lg font-label-numeric-md text-label-numeric-md shadow-md">
+            -20%
+          </div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded text-on-surface font-label-caption text-label-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">location_on</span>
+            1F 精肉コーナー 平台
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div><div class="flex items-center gap-1 mb-1"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-caption text-label-caption font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">storefront</span>ライフ 渋谷桜丘店 限定価格・在庫</span></div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-caption text-label-caption text-on-surface-variant font-bold">国内産牛肉</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant font-medium">残り約5パック</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+              国産牛肉小間切れ 200g
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+              肉じゃが、しぐれ煮、チャプチェなど普段のおかずに万能。
+            </p>
+</div>
+<div class="pt-space-xs bg-surface-container-low/50 -mx-space-md px-space-md py-space-xs rounded-xl">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-body-sm text-body-sm text-outline line-through mr-1.5">¥498</span>
+<span class="font-label-numeric-lg text-headline-lg text-secondary font-bold">¥398</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">(税込 ¥429)</span>
+</div>
+<div class="text-right">
+<span class="font-label-caption text-label-caption text-on-surface-variant font-medium block">消費期限: 明日中</span>
+</div>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant/80 mt-1">
+              店頭参考在庫: 約5パック ※在庫の取り置きは行われません
+            </p>
+</div>
+<a class="w-full mt-1 py-3 px-space-md rounded-xl bg-surface-container-highest hover:bg-primary hover:text-on-primary text-primary font-headline-md text-body-md font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]" data-path="ai-recipes" href="#">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>この食材でレシピを探す</span>
+</a>
+</div>
+</article>
+<!-- Product Card 3: Premium Wagyu Steak (Regular / Near Date) -->
+<article class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Single thick cut Japanese black wagyu beef round steak in a premium dark supermarket packaging, clear fine marbling pattern, vibrant deep ruby color, rosemary sprig presentation under crisp grocery counter illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwvxzmENybY5QOdprONayw7YbB3hgvIwPYYxH00xDnfEkvkRiXsOoqF0RwZtdEpl9HhAGinbA9io4CilDrwYVvdvxby_OcgSUVIqCVzAbxMHrGrUKcCvvd6uN2CgAzUGaQ6lEzr5RIzRA4memV2vjx9xJDDHwNLYID-nokNCJ4ze9BRtq0DwzF8FqcB7U1827MwIMmG2ot7LXPhVB5s4-aXs_BuQ9yHNVN82q13sZw">
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-highest text-on-surface font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">event_available</span>2日後まで
+            </span>
+</div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded text-on-surface font-label-caption text-label-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">location_on</span>
+            1F 和牛専門ショーケース
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div><div class="flex items-center gap-1 mb-1"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-caption text-label-caption font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">storefront</span>ライフ 渋谷桜丘店 限定価格・在庫</span></div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-caption text-label-caption text-primary font-bold">鹿児島県産 A4等級</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant font-medium">残り約8パック</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+              黒毛和牛ももステーキ用 180g
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+              赤身の旨味が凝縮されたヘルシーなもも肉。ローストビーフや厚切り焼きに。
+            </p>
+</div>
+<div class="pt-space-xs bg-surface-container-low/50 -mx-space-md px-space-md py-space-xs rounded-xl">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-label-numeric-lg text-headline-lg text-on-surface font-bold">¥1,280</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">(税込 ¥1,382)</span>
+</div>
+<div class="text-right">
+<span class="font-label-caption text-label-caption text-on-surface-variant font-medium block">消費期限: 2日後</span>
+</div>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant/80 mt-1">
+              店頭参考在庫: 約8パック ※在庫の取り置きは行われません
+            </p>
+</div>
+<a class="w-full mt-1 py-3 px-space-md rounded-xl bg-surface-container-highest hover:bg-primary hover:text-on-primary text-primary font-headline-md text-body-md font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]" data-path="ai-recipes" href="#">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>この食材でレシピを探す</span>
+</a>
+</div>
+</article>
+<!-- Product Card 4: Minced Beef Discount (Rescue Item) -->
+<article class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Fresh Australian ground minced beef in clear grocery packaging on white surface, fine pink strands, pristine fresh appearance, soft daylight studio setting emphasizing everyday home cooking essentials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDISaNlfjtI5zt3ywljHAYP2Mbiw-zqUbkwVvaiohqkZWXNtcnU9POq-tPHgnRSgl9FrFzK232nv7fOu8MCw4U4K_xCVJ7QYgDmHwL1yAShJW-8N_RAIqt-uga-LkyxJIYKWY3l2AbllssqG-Zf3y_2S97mp0Epqdnn0u534k1isOaP2InbapAGV7kISAq68PBJQn6zQa4sQTSXkGGpT9xmGf6fqyQ7Mi_cx366_kzM">
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-2 py-0.5 rounded-md bg-secondary text-on-secondary font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">alarm</span>本日中
+            </span>
+<span class="px-2 py-0.5 rounded-md bg-primary text-on-primary font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">eco</span>レスキュー対象
+            </span>
+</div>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-primary-container px-2 py-1 rounded-lg font-label-numeric-md text-label-numeric-md shadow-md">
+            -15%
+          </div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded text-on-surface font-label-caption text-label-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">location_on</span>
+            1F 挽肉・味付け肉コーナー
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div><div class="flex items-center gap-1 mb-1"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-caption text-label-caption font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">storefront</span>ライフ 渋谷桜丘店 限定価格・在庫</span></div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-caption text-label-caption text-secondary font-bold">オーストラリア産</span>
+<span class="font-label-caption text-label-caption text-error font-medium">残り約2パック</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+              豪州産牛ミンチ 300g
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+              ハンバーグ、ミートソースパスタ、タコライスにすぐ使えるたっぷり容量。
+            </p>
+</div>
+<div class="pt-space-xs bg-surface-container-low/50 -mx-space-md px-space-md py-space-xs rounded-xl">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-body-sm text-body-sm text-outline line-through mr-1.5">¥420</span>
+<span class="font-label-numeric-lg text-headline-lg text-secondary font-bold">¥357</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">(税込 ¥385)</span>
+</div>
+<div class="text-right">
+<span class="font-label-caption text-label-caption text-secondary font-bold block">消費期限: 本日 20:00</span>
+</div>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant/80 mt-1">
+              店頭参考在庫: 約2パック ※在庫の取り置きは行われません
+            </p>
+</div>
+<a class="w-full mt-1 py-3 px-space-md rounded-xl bg-surface-container-highest hover:bg-primary hover:text-on-primary text-primary font-headline-md text-body-md font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]" data-path="ai-recipes" href="#">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>この食材でレシピを探す</span>
+</a>
+</div>
+</article>
+<!-- Product Card 5: Beef Rib Kalbi for Yakiniku -->
+<article class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Packaged beef short rib kalbi cut for Korean BBQ in a supermarket tray, rich grain and juicy fat layers, appetizing raw meat photography, modern clean grocery aesthetic with soft illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZSVpu2YhByqXahvdqWbnU08sRilcgaT3LBvDWHcQWwcJSmBJmtL-4LimQhV8w-srNLo0tJkNdQyIYZOpcDcyQeK2AQVzxrlJCCFCkYbx_qt3aEj662gK7Y6ezgphksSK4bWWaPpgCDYFhHWGqx5kYtEtms0kAla57oyrd386aidxK-vyNDJBa2KXT4JAcrQNXucZjl_n53Cb85qcVXDmDizmLhikvLyuFeV0OTbKA">
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-2 py-0.5 rounded-md bg-secondary text-on-secondary font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">alarm</span>本日中
+            </span>
+<span class="px-2 py-0.5 rounded-md bg-primary text-on-primary font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">eco</span>レスキュー対象
+            </span>
+</div>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-primary-container px-2 py-1 rounded-lg font-label-numeric-md text-label-numeric-md shadow-md">
+            -25%
+          </div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded text-on-surface font-label-caption text-label-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">location_on</span>
+            1F 焼肉コーナー
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div><div class="flex items-center gap-1 mb-1"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-caption text-label-caption font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">storefront</span>ライフ 渋谷桜丘店 限定価格・在庫</span></div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-caption text-label-caption text-secondary font-bold">アメリカ産 チョイス等級</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant font-medium">残り約4パック</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+              牛バラカルビ焼肉用 280g
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+              旨みたっぷりのジューシーカルビ。フライパンで香ばしく焼肉丼にも。
+            </p>
+</div>
+<div class="pt-space-xs bg-surface-container-low/50 -mx-space-md px-space-md py-space-xs rounded-xl">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-body-sm text-body-sm text-outline line-through mr-1.5">¥680</span>
+<span class="font-label-numeric-lg text-headline-lg text-secondary font-bold">¥510</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">(税込 ¥550)</span>
+</div>
+<div class="text-right">
+<span class="font-label-caption text-label-caption text-secondary font-bold block">消費期限: 本日 22:00</span>
+</div>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant/80 mt-1">
+              店頭参考在庫: 約4パック ※在庫の取り置きは行われません
+            </p>
+</div>
+<a class="w-full mt-1 py-3 px-space-md rounded-xl bg-surface-container-highest hover:bg-primary hover:text-on-primary text-primary font-headline-md text-body-md font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]" data-path="ai-recipes" href="#">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>この食材でレシピを探す</span>
+</a>
+</div>
+</article>
+<!-- Product Card 6: Beef Tendon for Stew -->
+<article class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Packaged raw Japanese beef tendon chunks for slow stewing in plastic tray, distinct collagen and lean meat textures, clean supermarket presentation, soft green fresh lighting background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKl9Zv19RiZRvYjijQSdWufMZivqdJT1Xsrc3eSACntpuTVKaLF2D3BooPakE1NfuPDq69U6XATQSDCQcy1iRYflFX5UGnHKoMe51Yfe_sMQsbcm1U9QmDzrJva_vJ2N1K55_x3rG1IO8y_-y52PYz6umX6FOWEKWAV7qXq2RYEw2OaPuVJ-0-YTeEWmJ9XZdrCtLeWTQeCJ9qcMg2aVYjNHpY1fgoagGlDlb_QmXz">
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-2 py-0.5 rounded-md bg-secondary text-on-secondary font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">schedule</span>明日まで
+            </span>
+<span class="px-2 py-0.5 rounded-md bg-primary text-on-primary font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">eco</span>レスキュー対象
+            </span>
+</div>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-primary-container px-2 py-1 rounded-lg font-label-numeric-md text-label-numeric-md shadow-md">
+            -20%
+          </div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded text-on-surface font-label-caption text-label-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">location_on</span>
+            1F 煮込み・ホルモンコーナー
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div><div class="flex items-center gap-1 mb-1"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-caption text-label-caption font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">storefront</span>ライフ 渋谷桜丘店 限定価格・在庫</span></div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-caption text-label-caption text-on-surface-variant font-bold">国内産</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant font-medium">残り約6パック</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+              国産牛すじ肉（煮込み用） 350g
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+              どて焼き、牛すじカレー、おでんに。煮込むほどにプルプル濃厚なコラーゲン。
+            </p>
+</div>
+<div class="pt-space-xs bg-surface-container-low/50 -mx-space-md px-space-md py-space-xs rounded-xl">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-body-sm text-body-sm text-outline line-through mr-1.5">¥520</span>
+<span class="font-label-numeric-lg text-headline-lg text-secondary font-bold">¥416</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">(税込 ¥449)</span>
+</div>
+<div class="text-right">
+<span class="font-label-caption text-label-caption text-on-surface-variant font-medium block">消費期限: 明日中</span>
+</div>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant/80 mt-1">
+              店頭参考在庫: 約6パック ※在庫の取り置きは行われません
+            </p>
+</div>
+<a class="w-full mt-1 py-3 px-space-md rounded-xl bg-surface-container-highest hover:bg-primary hover:text-on-primary text-primary font-headline-md text-body-md font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]" data-path="ai-recipes" href="#">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>この食材でレシピを探す</span>
+</a>
+</div>
+</article>
+<!-- Product Card 7: Tenderloin Cut-offs (High Value Rescue) -->
+<article class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Packaged tender beef fillet cuts and trimmings on black plastic food tray, ultra lean deep crimson beef cuts, close-up perspective showing delicacy and freshness in grocery shelf light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhu66FmCmI8InJLYwaytxfv7zZopsbrfSUuihjRW9RIqhC9PwKM7BqbOEUwG65LojJ_IV7rKfcPHkaM-DaGY5bTxHJpSvJr0c_Mmzzk_E6fobX-AttBTb0AxTQehbp5eXhqxL2t0ThKu1dSeOS690vJm2_tdRAefzRBQwcEgSMraIqB4ehNZKX7yp3k6lIlFIEE9H-slGxsfbUtckWZrx1fMfIDdE-CNKQYlKeuLse">
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-2 py-0.5 rounded-md bg-secondary text-on-secondary font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">alarm</span>本日中
+            </span>
+<span class="px-2 py-0.5 rounded-md bg-primary text-on-primary font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">eco</span>レスキュー対象
+            </span>
+</div>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-primary-container px-2 py-1 rounded-lg font-label-numeric-md text-label-numeric-md shadow-md">
+            -40%
+          </div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded text-on-surface font-label-caption text-label-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">location_on</span>
+            1F 精肉コーナー奥 特設棚
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div><div class="flex items-center gap-1 mb-1"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-caption text-label-caption font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">storefront</span>ライフ 渋谷桜丘店 限定価格・在庫</span></div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-caption text-label-caption text-secondary font-bold">国産牛 ヒレ限定品</span>
+<span class="font-label-caption text-label-caption text-error font-medium flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>残り1パック
+              </span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+              牛ヒレ切り落とし 160g
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+              極めて柔らかく脂肪が少ない極上部位。ひとくちサイコロステーキに最適。
+            </p>
+</div>
+<div class="pt-space-xs bg-surface-container-low/50 -mx-space-md px-space-md py-space-xs rounded-xl">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-body-sm text-body-sm text-outline line-through mr-1.5">¥980</span>
+<span class="font-label-numeric-lg text-headline-lg text-secondary font-bold">¥588</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">(税込 ¥635)</span>
+</div>
+<div class="text-right">
+<span class="font-label-caption text-label-caption text-secondary font-bold block">消費期限: 本日 19:30</span>
+</div>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant/80 mt-1">
+              店頭参考在庫: 約1パック ※在庫の取り置きは行われません
+            </p>
+</div>
+<a class="w-full mt-1 py-3 px-space-md rounded-xl bg-primary hover:bg-primary-container text-on-primary font-headline-md text-body-md font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.98]" data-path="ai-recipes" href="#">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>この食材でレシピを探す</span>
+</a>
+</div>
+</article>
+<!-- Product Card 8: Beef Curry Stew Chunks -->
+<article class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Packaged cubed beef chunks for stew and curry in clear retail grocery packaging, appetizing red and marble layers, overhead view under bright Japanese supermarket lamps." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8doDingNLcKc700CkzxjKLpYvn4Uqtt0Vmc6fN9w8Foi0nIGU3kv9cJTZMQXsCS9vQdjKUWkwsH0oNLq2ac-OwgSVtBu1yVpdksJKwb2JC_tlRpvUYGbdNZ9rF9GOlPafG5jTF72mSY348e_-0m2354Uaf4kYOnW_uCOKXTplFN8VLChv1B6hK_S-K4w2URPqYyA4EhtBuujzN4lQ3Axo_pG-IxB8ekVH9sKMOwAp">
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-2 py-0.5 rounded-md bg-secondary text-on-secondary font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">schedule</span>明日まで
+            </span>
+<span class="px-2 py-0.5 rounded-md bg-primary text-on-primary font-label-badge text-label-badge flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">eco</span>レスキュー対象
+            </span>
+</div>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-primary-container px-2 py-1 rounded-lg font-label-numeric-md text-label-numeric-md shadow-md">
+            -20%
+          </div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded text-on-surface font-label-caption text-label-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">location_on</span>
+            1F カレー・シチュー用精肉棚
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div><div class="flex items-center gap-1 mb-1"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-caption text-label-caption font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">storefront</span>ライフ 渋谷桜丘店 限定価格・在庫</span></div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-caption text-label-caption text-on-surface-variant font-bold">オーストラリア産 熟成角切り</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant font-medium">残り約5パック</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+              牛もも角切り（カレー用） 240g
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+              ゴロゴロ具材の贅沢ビーフカレーやビーフシチューにぴったり。
+            </p>
+</div>
+<div class="pt-space-xs bg-surface-container-low/50 -mx-space-md px-space-md py-space-xs rounded-xl">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-body-sm text-body-sm text-outline line-through mr-1.5">¥580</span>
+<span class="font-label-numeric-lg text-headline-lg text-secondary font-bold">¥464</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">(税込 ¥501)</span>
+</div>
+<div class="text-right">
+<span class="font-label-caption text-label-caption text-on-surface-variant font-medium block">消費期限: 明日中</span>
+</div>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant/80 mt-1">
+              店頭参考在庫: 約5パック ※在庫の取り置きは行われません
+            </p>
+</div>
+<a class="w-full mt-1 py-3 px-space-md rounded-xl bg-surface-container-highest hover:bg-primary hover:text-on-primary text-primary font-headline-md text-body-md font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]" data-path="ai-recipes" href="#">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>この食材でレシピを探す</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- In-Store Shopping How-It-Works Visual Card -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-lg">
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-primary font-bold">店頭ショッピングの流れ</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+          店舗で見つけた食材から、今夜の献立をAIが最短で組み立てます
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Food Rescueは店頭の棚にある値引き品・見切り品を手に取っていただくためのナビゲーションです。食材を選んで「この食材でレシピを探す」を押すと、店内にある他の買い足し推奨食材と調味料を自動で提案します。
+        </p>
+</div>
+<div class="grid grid-cols-3 gap-space-sm w-full md:w-auto flex-shrink-0">
+<div class="flex flex-col items-center text-center p-space-sm bg-surface-container-low rounded-xl">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold mb-1">1</div>
+<span class="font-body-sm text-body-sm font-bold text-on-surface">棚で食材確認</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">見切り品を発見</span>
+</div>
+<div class="flex flex-col items-center text-center p-space-sm bg-surface-container-low rounded-xl">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold mb-1">2</div>
+<span class="font-body-sm text-body-sm font-bold text-on-surface">AIレシピ生成</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">買い足しリスト確認</span>
+</div>
+<div class="flex flex-col items-center text-center p-space-sm bg-surface-container-low rounded-xl">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold mb-1">3</div>
+<span class="font-body-sm text-body-sm font-bold text-on-surface">店頭レジでお会計</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">食品ロス削減完了</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for active filtering
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterInput = document.getElementById('ingredient-search');
+    if (filterInput) {
+      filterInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          // Re-affirm query state
+          filterInput.blur();
+        }
+      });
+    }
+  });
+</script></main><footer class="w-full bg-surface-container-low text-on-surface-variant mt-space-xl"><div class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl"><div class="bg-surface-container-lowest rounded-xl p-space-md mb-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-secondary text-[22px] flex-shrink-0">info</span><div class="flex flex-col gap-space-xs"><p class="font-headline-md text-body-lg text-on-surface">ご利用ガイド（お買い物にあたってのお願い）</p><p class="font-body-sm text-body-sm text-on-surface-variant">Food Rescueは店頭での食品ロス削減を応援するアプリです。<strong>店舗で商品を選び、レジでクーポンをご提示ください。※予約・取り置き・事前決済サービスではありません。</strong> 店頭の在庫状況はリアルタイムで変動するため、売り切れの際はご容赦ください。</p></div></div></div><div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg mb-space-lg"><div class="space-y-space-xs"><div class="flex items-center gap-space-xs text-primary font-headline-md text-headline-md"><span class="material-symbols-outlined">eco</span><span>Food Rescue</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">スーパーの食品ロスをAIとテクノロジーでおいしく解決。地域とお店をつなぐサステナブルな買い物支援プラットフォームです。</p></div><div><p class="font-headline-md text-body-md text-on-surface mb-space-sm">サービス</p><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="hover:text-primary transition-colors" data-path="search-products" href="#">値引き食材・見切り品検索</a></li><li><a class="hover:text-primary transition-colors" data-path="ai-recipes" href="#">食品ロス削減AIレシピ</a></li><li><a class="hover:text-primary transition-colors" data-path="my-coupons" href="#">レジ提示用マイクーポン</a></li></ul></div><div><p class="font-headline-md text-body-md text-on-surface mb-space-sm">インフォメーション</p><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="hover:text-primary transition-colors" data-path="eco-initiatives" href="#">食品ロス削減への取り組み</a></li><li><a class="hover:text-primary transition-colors" data-path="shopping-guide" href="#">ご利用ガイド・店頭ルール</a></li><li><a class="hover:text-primary transition-colors" data-path="company-overview" href="#">会社概要</a></li><li><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">プライバシーポリシー</a></li></ul></div><div><p class="font-headline-md text-body-md text-on-surface mb-space-sm">加盟店・パートナー</p><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="flex items-center gap-space-xs text-primary hover:text-primary-container transition-colors font-medium" data-path="store-staff-login" href="#"><span class="material-symbols-outlined text-[16px]">lock</span><span>店舗スタッフログイン</span></a></li><li><a class="hover:text-primary transition-colors" data-path="store-registration-inquiry" href="#">新規加盟スーパーのお問い合わせ</a></li></ul></div></div><div class="pt-space-md border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm"><p>© 2025 Food Rescue Japan. All rights reserved.</p><p class="text-label-caption text-on-surface-variant">本サービスは店頭購買支援専用です（オンライン決済・事前取り置き不可）</p></div></div></footer>
+
+</body></html>

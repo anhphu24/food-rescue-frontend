@@ -1,0 +1,608 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed-variant":"#783200","on-background":"#111c2d","secondary":"#9d4300","surface-container":"#e7eeff","on-secondary-container":"#5c2400","on-primary-fixed":"#002114","error":"#ba1a1a","error-container":"#ffdad6","tertiary":"#006947","surface-dim":"#cfdaf2","surface":"#f9f9ff","on-primary":"#ffffff","on-surface":"#111c2d","tertiary-container":"#00855b","inverse-primary":"#68dba9","on-primary-fixed-variant":"#005137","on-tertiary-container":"#f5fff6","on-surface-variant":"#3d4a42","surface-variant":"#d8e3fb","outline-variant":"#bccac0","tertiary-fixed-dim":"#4edea3","surface-bright":"#f9f9ff","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#005236","surface-container-lowest":"#ffffff","primary":"#006948","primary-container":"#00855d","secondary-container":"#fd761a","on-secondary":"#ffffff","secondary-fixed-dim":"#ffb690","inverse-surface":"#263143","on-secondary-fixed":"#341100","surface-container-highest":"#d8e3fb","inverse-on-surface":"#ecf1ff","primary-fixed-dim":"#68dba9","background":"#f9f9ff","on-error-container":"#93000a","surface-container-high":"#dee8ff","outline":"#6d7a72","secondary-fixed":"#ffdbca","tertiary-fixed":"#6ffbbe","on-tertiary-fixed":"#002113","primary-fixed":"#85f8c4","surface-container-low":"#f0f3ff","on-error":"#ffffff","on-primary-container":"#f5fff7","surface-tint":"#006c4a"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xs":"0.25rem","gutter-mobile":"0.75rem","space-xl":"2.5rem",margin:"1.5rem","space-lg":"1.5rem",gutter:"1rem","margin-mobile":"1rem","space-sm":"0.5rem","space-md":"1rem"},fontFamily:{"body-lg":["Noto Sans"],"body-sm":["Noto Sans"],"headline-lg":["Noto Sans"],"headline-lg-mobile":["Noto Sans"],"headline-md":["Noto Sans"],"label-badge":["Noto Sans"],"label-numeric-lg":["Inter"],"body-md":["Noto Sans"],"label-caption":["Noto Sans"],"headline-xl":["Noto Sans"],"label-numeric-md":["Inter"],"headline-xl-mobile":["Noto Sans"]},fontSize:{"body-lg":["16px",{lineHeight:"24px",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",fontWeight:"700"}],"headline-lg-mobile":["20px",{lineHeight:"28px",fontWeight:"700"}],"headline-md":["18px",{lineHeight:"26px",fontWeight:"700"}],"label-badge":["11px",{lineHeight:"14px",fontWeight:"700"}],"label-numeric-lg":["22px",{lineHeight:"28px",fontWeight:"700"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-caption":["10px",{lineHeight:"14px",fontWeight:"500"}],"headline-xl":["32px",{lineHeight:"40px",fontWeight:"700"}],"label-numeric-md":["16px",{lineHeight:"20px",fontWeight:"700"}],"headline-xl-mobile":["26px",{lineHeight:"34px",fontWeight:"700"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="p-space-md bg-surface-container-low"><div class="flex items-center gap-space-sm mb-space-xs"><span class="material-symbols-outlined text-primary text-[24px]">eco</span><span class="font-headline-md text-headline-md text-on-surface">Food Rescue 店舗管理</span></div><div class="flex items-center justify-between mt-space-xs bg-surface-container-lowest px-space-sm py-space-xs rounded-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">storefront</span><span class="font-body-sm text-body-sm text-on-surface font-bold">ライフ 渋谷桜丘店</span></div><span class="font-label-badge text-label-badge bg-primary text-on-primary px-space-xs py-0.5 rounded">直営</span></div></div><nav class="p-space-md flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>ダッシュボード</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="product-catalog" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>商品マスター</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-bold rounded-xl" data-path="lots-and-in-store-stock" href="#"><span class="material-symbols-outlined text-[20px]">shelves</span><span>ロット・在庫管理</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="coupon-management" href="#"><span class="material-symbols-outlined text-[20px]">sell</span><span>クーポン管理</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="pos-register-check" href="#"><span class="material-symbols-outlined text-[20px]">qr_code_scanner</span><span>レジ利用確認</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="store-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>店舗設定・スタッフ</span></a></nav></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm bg-surface-container-lowest p-space-sm rounded-xl"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-body-sm text-body-sm text-on-surface font-bold truncate">田中 健一</span><span class="font-label-caption text-label-caption text-on-surface-variant truncate">店長・店舗管理者</span></div></div><div class="flex items-center gap-space-xs"><a class="flex-1 flex items-center justify-center gap-space-xs py-space-xs px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface text-body-sm font-body-sm transition-colors" data-path="switch-store" href="#"><span class="material-symbols-outlined text-[16px]">sync_alt</span><span>店舗切替</span></a><a class="flex-1 flex items-center justify-center gap-space-xs py-space-xs px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface text-body-sm font-body-sm transition-colors" data-path="customer-app" href="#"><span class="material-symbols-outlined text-[16px]">open_in_new</span><span>お客様画面</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><span class="font-bold text-on-surface">ライフ 渋谷桜丘店</span><span class="text-outline">/</span><span>店舗管理コンソール</span></div><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-space-xs rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-badge text-label-badge text-on-surface-variant">POS連携: オンライン (同期中) 最終更新 18:45</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-lowest text-on-surface font-label-badge text-label-badge"><span class="material-symbols-outlined text-primary text-[16px]">schedule</span><span>営業中 9:30 - 23:00</span></div><button class="relative p-space-xs rounded-full hover:bg-surface-container transition-colors text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span></button><button class="flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary px-space-md py-space-xs rounded-xl font-body-sm text-body-sm font-bold shadow-[0_2px_8px_rgba(0,105,72,0.2)] transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">add_circle</span><span>+ 見切り品・ロット登録</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command & Action Bar -->
+<div class="px-space-lg py-space-md bg-surface-container-lowest shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface">ロット・店頭在庫管理</span>
+<span class="font-label-badge text-label-badge bg-primary/10 text-primary px-2 py-0.5 rounded-full font-bold">現物在庫リアルタイム同期中</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          商品マスターに紐づく賞味・消費期限、店頭見切りシール割引率、棚卸在庫数をロット単位で即時反映できます。
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-2.5 rounded-xl font-body-sm text-body-sm transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>見切りシール一括印刷 (6件)</span>
+</button>
+<button class="flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary px-space-md py-2.5 rounded-xl font-body-sm text-body-sm font-bold shadow-md shadow-primary/20 transition-all hover:scale-[1.01]" id="open-new-lot-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ 新規ロット登録（見切り品）</span>
+</button>
+</div>
+</div>
+<!-- Filter Strip & Quick Counter Matrix -->
+<div class="mt-space-md pt-space-md flex flex-wrap items-center justify-between gap-space-md bg-surface-container-low/60 p-space-sm rounded-xl">
+<!-- Fast Filter Pills -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="filter-btn active flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-bold shadow-sm" type="button">
+<span>すべて表示</span>
+<span class="bg-on-primary/20 text-on-primary text-[11px] px-1.5 py-0.2 rounded-full font-label-numeric-md">42</span>
+</button>
+<button class="filter-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors font-body-sm text-body-sm font-medium" type="button">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>本日中消費期限</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-numeric-md text-[11px] px-1.5 py-0.2 rounded-full font-bold">14</span>
+</button>
+<button class="filter-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors font-body-sm text-body-sm font-medium" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">schedule</span>
+<span>明日まで</span>
+<span class="bg-surface-container font-label-numeric-md text-[11px] px-1.5 py-0.2 rounded-full">19</span>
+</button>
+<button class="filter-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors font-body-sm text-body-sm font-medium" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">percent</span>
+<span>見切り割引中</span>
+<span class="bg-surface-container font-label-numeric-md text-[11px] px-1.5 py-0.2 rounded-full font-bold">28</span>
+</button>
+<button class="filter-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors font-body-sm text-body-sm font-medium" type="button">
+<span class="material-symbols-outlined text-[16px] text-error">warning</span>
+<span>残り僅か (3個以下)</span>
+<span class="bg-error-container text-on-error-container font-label-numeric-md text-[11px] px-1.5 py-0.2 rounded-full font-bold">7</span>
+</button>
+</div>
+<!-- Quick Search Bar & Shelf Zone Dropdown -->
+<div class="flex items-center gap-space-xs flex-1 max-w-md min-w-[280px]">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm font-body-sm pl-9 pr-4 py-2 rounded-lg outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all shadow-inner" placeholder="ロット番号、JAN、商品名、売り場コード..." type="text">
+</div>
+<select class="bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-3 py-2 rounded-lg outline-none cursor-pointer hover:bg-surface-container transition-colors">
+<option>売り場: 全ゾーン</option>
+<option>1F 精肉コーナー</option>
+<option>1F 鮮魚コーナー</option>
+<option>1F 惣菜・弁当コーナー</option>
+<option>1F 青果・デイリー</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Workspace Grid: Left Lots Grid & Right Fast Inspector / Edit Drawer -->
+<div class="px-space-lg py-space-md grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<!-- Left Main: High Density Operations Grid (8 cols in wide, 12 in narrow) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Real-time Shelf Warning Banner -->
+<div class="bg-gradient-to-r from-secondary/15 via-secondary/5 to-transparent p-space-md rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-secondary text-on-secondary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">hourglass_top</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-on-surface">夜間タイムセール準備 (20:00~21:00 消費期限)</span>
+<span class="bg-secondary text-on-secondary font-label-badge text-label-badge px-2 py-0.5 rounded-full">優先処理 4品</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              本日21:00前後に期限を迎える精肉・惣菜ロットです。見切りシール貼付または割引率を50%へ切り替えることで売り切りが期待できます。
+            </p>
+</div>
+</div>
+<button class="shrink-0 bg-secondary hover:bg-on-secondary-fixed-variant text-on-secondary px-space-md py-2 rounded-lg font-body-sm text-body-sm font-bold transition-colors" type="button">
+          対象ロットを一括50%引
+        </button>
+</div>
+<!-- High Precision Lot Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="px-space-md py-3 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-on-surface">ロット一覧</span>
+<span class="font-body-sm text-body-sm text-outline">（登録順: 最新ロット優先）</span>
+</div>
+<div class="flex items-center gap-space-sm text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> 本日21時前</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span> 通常見切り</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-outline"></span> 正常在庫</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-badge text-label-badge uppercase tracking-wider">
+<th class="py-3 px-4 font-bold">ロットID / 登録時刻</th>
+<th class="py-3 px-4 font-bold">対象商品（マスター連携）</th>
+<th class="py-3 px-4 font-bold">売り場ロケーション</th>
+<th class="py-3 px-4 font-bold">期限ステータス</th>
+<th class="py-3 px-4 font-bold">店頭価格 / 割引</th>
+<th class="py-3 px-4 font-bold text-center">店頭在庫数</th>
+<th class="py-3 px-4 font-bold">施策連携</th>
+<th class="py-3 px-4 font-bold text-right">操作</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<!-- Item 1: Urgent (Highlighted row) -->
+<tr class="bg-secondary-fixed/20 hover:bg-secondary-fixed/30 transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-numeric-md text-label-numeric-md font-bold text-on-surface">LOT-20250510-01</span>
+<span class="text-on-surface-variant text-[11px] font-label-caption">本日 15:40 登録</span>
+</div>
+</td>
+<td class="py-3.5 px-4 min-w-[200px]">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0 shadow-sm" data-alt="Close up photograph of fresh marbled Japanese beef chuck roll sliced thin on black foam tray in supermarket packaging with pristine eco lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfOLFtIydY2I3xEYVZbUMsrqxaz_0O1itPvJ4xqSwh7QuVRywoEW_DC6pyaCMqGow_GeYvBOCFkWWiJmD8Zn7J4VIO75Q079axvyz1A4HSdvFhFn4_7o_BX_sXL1KdCWz2mSdxkhaQkEm5_I-OCsnSh96FgJ6EatRHrUhoAujSNH_kLF7tc0OI8M_En60sSp9FGZUztozY8ubNKRSmZkc5shhxJezjHaBPjbSkjhuB">
+<div class="flex flex-col min-w-0">
+<span class="font-bold text-on-surface truncate">国産牛肩ローススライス 250g</span>
+<span class="text-outline text-[11px] font-label-caption">JAN: 4901234567890</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+<span class="font-medium text-on-surface truncate max-w-[130px]" title="1F 精肉コーナー奥 冷ケース">1F 精肉 奥ケース</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="bg-secondary text-on-secondary px-2 py-0.5 rounded-full font-label-badge text-label-badge font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">alarm</span>本日 21:00
+                      </span>
+</div>
+<span class="text-secondary font-bold text-[11px]">残り 2時間15分</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="text-outline line-through text-[12px]">¥780</span>
+<span class="font-label-numeric-md text-label-numeric-md text-secondary font-bold">¥546</span>
+</div>
+<span class="text-on-secondary-container bg-secondary-fixed px-1.5 py-0.5 rounded text-[10px] font-bold w-fit mt-0.5">30% OFF</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-numeric-lg text-label-numeric-lg font-bold text-on-surface">3<span class="text-body-sm font-normal text-on-surface-variant ml-0.5">パック</span></span>
+<span class="bg-secondary/15 text-secondary px-2 py-0.2 rounded-full text-[10px] font-bold">要補充目安</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-tertiary-container text-on-tertiary-container font-label-caption text-label-caption font-bold">
+<span class="material-symbols-outlined text-[12px]">eco</span>
+                      牛丼セット割連動中
+                    </span>
+<span class="text-outline text-[10px]">AIレシピ提案: 有効</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="見切りシール印刷" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="edit-lot-trigger p-1.5 rounded-lg hover:bg-primary-container hover:text-on-primary-container text-primary transition-colors" title="ロット編集" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-error-container text-outline hover:text-error transition-colors" title="売り切り・販売終了" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 2: Fresh Sashimi (Urgent) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-numeric-md text-label-numeric-md font-bold text-on-surface">LOT-20250510-02</span>
+<span class="text-on-surface-variant text-[11px] font-label-caption">本日 16:10 登録</span>
+</div>
+</td>
+<td class="py-3.5 px-4 min-w-[200px]">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0 shadow-sm" data-alt="Fresh premium assorted sashimi platter with tuna salmon and sea bream carefully arranged on decorative tray in supermarket cold display case with clean studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt2NowchGZxRu8p9dTwGPZmDRzFL0rgYrTbpBhTU99lpeVx4Bjx8TwyJRTiqV55MgXMQm8mGslJVvOKTCq-pOPPu3ZVaX14N5IpjulwdeLlzKa0RHefsaCXyJjdw4AO6DcbLQwvyRf7RCRMApzubr6_CSZ-qDbWL4_uPSy_nzqNruJ_NFDUONwbXPtwsVJEOJmU2CGwm9tpxTzur5QyUsHhUEtsxNDiEdABgzGQVQJ">
+<div class="flex flex-col min-w-0">
+<span class="font-bold text-on-surface truncate">旬のお刺身盛合せ 4種</span>
+<span class="text-outline text-[11px] font-label-caption">JAN: 4902345678901</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+<span class="font-medium text-on-surface truncate max-w-[130px]">1F 鮮魚 氷台ワゴン</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="bg-secondary text-on-secondary px-2 py-0.5 rounded-full font-label-badge text-label-badge font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">alarm</span>本日 20:30
+                      </span>
+</div>
+<span class="text-secondary font-bold text-[11px]">残り 1時間45分</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="text-outline line-through text-[12px]">¥1,280</span>
+<span class="font-label-numeric-md text-label-numeric-md text-secondary font-bold">¥896</span>
+</div>
+<span class="text-on-secondary-container bg-secondary-fixed px-1.5 py-0.5 rounded text-[10px] font-bold w-fit mt-0.5">30% OFF</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-numeric-lg text-label-numeric-lg font-bold text-on-surface">5<span class="text-body-sm font-normal text-on-surface-variant ml-0.5">パック</span></span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.2 rounded-full text-[10px]">適正陳列</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-caption text-label-caption font-medium">
+<span class="material-symbols-outlined text-[12px]">sell</span>
+                      鮮魚夕市クーポン
+                    </span>
+<span class="text-outline text-[10px]">AIレシピ提案: 有効</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="edit-lot-trigger p-1.5 rounded-lg hover:bg-primary-container hover:text-on-primary-container text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-error-container text-outline hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 3: Prepared Deli Bento (High discount) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-numeric-md text-label-numeric-md font-bold text-on-surface">LOT-20250510-03</span>
+<span class="text-on-surface-variant text-[11px] font-label-caption">本日 17:05 登録</span>
+</div>
+</td>
+<td class="py-3.5 px-4 min-w-[200px]">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0 shadow-sm" data-alt="Freshly made Japanese pork katsu bento box with shredded cabbage rice and pickles packaged ready to eat on grocery store display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV-kigJfVlbnYhK_Y-gs60BgC39hLSdSgLDWAj0gvUizXl2lKLtAMLC5ZeMcSgqnegbX7tRakZg5jfQ8-KSj7ebQBMvbPGrLjTYsZHx2a3G98cgBW93ZoD8MLSOC1jKx62xFjtLRUC4iBsn3if98yNpDFdpex67lx6-RF-o78fSUJgAy4M3WYFhDbcmj5qq3FmYRS3wpK-HkFSaimTMjlRSNTzrxWQtDxESxNtI78T">
+<div class="flex flex-col min-w-0">
+<span class="font-bold text-on-surface truncate">三元豚のやわらかロースカツ弁当</span>
+<span class="text-outline text-[11px] font-label-caption">JAN: 4903456789012</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+<span class="font-medium text-on-surface truncate max-w-[130px]">1F 惣菜中央島棚</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="bg-secondary text-on-secondary px-2 py-0.5 rounded-full font-label-badge text-label-badge font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">alarm</span>本日 22:00
+                      </span>
+</div>
+<span class="text-secondary font-bold text-[11px]">残り 3時間15分</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="text-outline line-through text-[12px]">¥598</span>
+<span class="font-label-numeric-md text-label-numeric-md text-secondary font-bold">¥299</span>
+</div>
+<span class="text-on-secondary bg-secondary px-1.5 py-0.5 rounded text-[10px] font-bold w-fit mt-0.5">50% 半額</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-numeric-lg text-label-numeric-lg font-bold text-on-surface">8<span class="text-body-sm font-normal text-on-surface-variant ml-0.5">点</span></span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.2 rounded-full text-[10px]">在庫十分</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-tertiary-container text-on-tertiary-container font-label-caption text-label-caption font-bold">
+<span class="material-symbols-outlined text-[12px]">notifications_active</span>
+                      プッシュ通知配信済
+                    </span>
+<span class="text-outline text-[10px]">夜勤者向け提案中</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="edit-lot-trigger p-1.5 rounded-lg hover:bg-primary-container hover:text-on-primary-container text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-error-container text-outline hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 4: Bakery / Day Ahead (Moderate) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-numeric-md text-label-numeric-md font-bold text-on-surface">LOT-20250509-08</span>
+<span class="text-on-surface-variant text-[11px] font-label-caption">昨日 18:20 登録</span>
+</div>
+</td>
+<td class="py-3.5 px-4 min-w-[200px]">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0 shadow-sm" data-alt="Artisan Japanese bakery fresh sliced white milk bread shokupan in clear packaging on wooden grocery display table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT7NIVr7wyMyR2FC6U0vzs2iCQZshJ57rZ2E7MoMNTJYX9IJ6KtIXc0x_zTc3LPMiRWLl8mkHMZ2pynB415THE5N9x0bjM_wL86HucP7D4C-8F7RotueCLbWBv9jm2DhQmNjvZjN5uTtcOuQITY3Xef3G_6AJ35fiFRkTxAlubI3bW0BpvB6rYq3u4udJ12WH-yAJSe1T-Bx8T8hdUTuR1EQjFXokl7yVLl1MjYLzQ">
+<div class="flex flex-col min-w-0">
+<span class="font-bold text-on-surface truncate">贅沢生食パン 1本(2斤)</span>
+<span class="text-outline text-[11px] font-label-caption">JAN: 4904567890123</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+<span class="font-medium text-on-surface truncate max-w-[130px]">1F ベーカリー前棚</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full font-label-badge text-label-badge font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">calendar_today</span>明日 12:00
+                      </span>
+</div>
+<span class="text-outline text-[11px]">残り 17時間</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="text-outline line-through text-[12px]">¥648</span>
+<span class="font-label-numeric-md text-label-numeric-md text-on-surface font-bold">¥518</span>
+</div>
+<span class="text-primary bg-primary/10 px-1.5 py-0.5 rounded text-[10px] font-bold w-fit mt-0.5">20% OFF</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-numeric-lg text-label-numeric-lg font-bold text-on-surface">2<span class="text-body-sm font-normal text-on-surface-variant ml-0.5">本</span></span>
+<span class="bg-error-container text-on-error-container px-2 py-0.2 rounded-full text-[10px] font-bold">品薄</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-caption text-label-caption font-medium">
+                      朝食まとめ割
+                    </span>
+<span class="text-outline text-[10px]">フレンチトースト提案</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="edit-lot-trigger p-1.5 rounded-lg hover:bg-primary-container hover:text-on-primary-container text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-error-container text-outline hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 5: Dairy Organic Milk (Standard) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-numeric-md text-label-numeric-md font-bold text-on-surface">LOT-20250508-14</span>
+<span class="text-on-surface-variant text-[11px] font-label-caption">5/8 10:15 登録</span>
+</div>
+</td>
+<td class="py-3.5 px-4 min-w-[200px]">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0 shadow-sm" data-alt="Carton of fresh organic milk on clean supermarket refrigerator dairy shelf with soft eco illumination" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7YxZHEN3vkVpiCiH__eLceI_GuXV7h9vGj0L4jdI2MSfYPJZhDxxXUJT_Hio-ZRXo8OIx6-qVcOU6tEk6sJS7Njwydg5YM1Dg9TTdP4-NVise0aA0pNkw_bBod7Wd4arG2lMny-M4n8V0FzkFXBc2idARr4QZgA5MzCKDqd8Sq9Aojgl7gCLsCnklJ7RWdbl978RhZ2csNE0SMHbFHBC0pfFEdDztZYuIHcomSrdu">
+<div class="flex flex-col min-w-0">
+<span class="font-bold text-on-surface truncate">北海道産直 オーガニック生乳 1000ml</span>
+<span class="text-outline text-[11px] font-label-caption">JAN: 4905678901234</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+<span class="font-medium text-on-surface truncate max-w-[130px]">1F 乳製品 リーチイン</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full font-label-badge text-label-badge font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">calendar_today</span>明日 23:59
+                      </span>
+</div>
+<span class="text-outline text-[11px]">残り 29時間</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="text-outline line-through text-[12px]">¥298</span>
+<span class="font-label-numeric-md text-label-numeric-md text-on-surface font-bold">¥238</span>
+</div>
+<span class="text-primary bg-primary/10 px-1.5 py-0.5 rounded text-[10px] font-bold w-fit mt-0.5">20% OFF</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-numeric-lg text-label-numeric-lg font-bold text-on-surface">6<span class="text-body-sm font-normal text-on-surface-variant ml-0.5">本</span></span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.2 rounded-full text-[10px]">陳列安定</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-tertiary-container text-on-tertiary-container font-label-caption text-label-caption font-bold">
+<span class="material-symbols-outlined text-[12px]">eco</span>
+                      Ecoフードレスキュー
+                    </span>
+<span class="text-outline text-[10px]">ミルクスープ提案</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="edit-lot-trigger p-1.5 rounded-lg hover:bg-primary-container hover:text-on-primary-container text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-error-container text-outline hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Live Sync Status & Pagination -->
+<div class="px-space-md py-3 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>物理POSスキャナー連携：正常稼働 (レジ通過数 124点 / 本日)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-[12px] font-label-caption text-outline">全 42 ロット中 1 - 5 を表示</span>
+<div class="flex items-center gap-1 ml-2">
+<button class="p-1 rounded bg-surface-container text-on-surface disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="px-2.5 py-0.5 rounded bg-primary text-on-primary font-bold text-[12px]">1</button>
+<button class="px-2.5 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-medium text-[12px]">2</button>
+<button class="px-2.5 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-medium text-[12px]">3</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- In-Store Visual Shelf Layout Guide (Mini Map of Store Sections) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">map</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">売り場ロケーション別 見切り在庫分布</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              各冷ケース・見切り品ワゴンのシール貼付状況とアプリ来訪者の回遊ホットスポット。
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto justify-end">
+<div class="text-right">
+<div class="font-label-numeric-md text-label-numeric-md font-bold text-on-surface">24 / 28 ロット</div>
+<div class="font-label-caption text-label-caption text-outline">見切りシール貼付完了率 85%</div>
+</div>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-2 rounded-xl font-body-sm text-body-sm font-medium transition-colors" type="button">
+            売り場マップを開く
+          </button>
+</div>
+</div>
+</div>
+<!-- Right Auxiliary: Real-time Lot Editor & Creator Workbench (4 cols) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Lot Registration & Edit Form Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md relative overflow-hidden transition-all duration-300" id="lot-form-card"><div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-primary-container to-secondary"></div><div class="flex items-center justify-between pb-space-sm border-b border-surface-container"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[22px]">edit_note</span><div><h3 class="font-headline-md text-headline-md text-on-surface" id="form-panel-title">新規ロット登録・見切り設定</h3><span class="font-label-caption text-label-caption text-outline">店舗現物在庫のみ（予約・取置なし）</span></div></div><div class="flex items-center gap-1.5"><span class="bg-primary/10 text-primary font-label-badge text-label-badge px-2 py-0.5 rounded-full font-bold" id="form-mode-badge">新規登録</span><button class="p-1 text-outline hover:text-on-surface rounded-lg transition-colors" id="btn-reset-lot-form" title="リセット" type="button"><span class="material-symbols-outlined text-[18px]">refresh</span></button></div></div><div class="flex flex-col gap-space-md mt-3"><!-- Target Store Indicator --><div class="flex items-center justify-between bg-surface-container-low px-3 py-2 rounded-xl"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">storefront</span><span class="font-body-sm text-body-sm font-bold text-on-surface">対象店舗: ライフ 渋谷桜丘店</span></div><span class="font-label-caption text-label-caption bg-surface-container-lowest px-2 py-0.5 rounded text-on-surface-variant font-medium">直営店舗固定</span></div><!-- Master Product Search & Auto-Select --><div class="flex flex-col gap-1.5"><div class="flex items-center justify-between"><label class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider font-bold">対象商品マスター検索・選択</label><span class="font-label-caption text-label-caption text-primary font-bold">JAN / 商品名即時検索</span></div><div class="relative"><span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span><input class="w-full bg-surface-container-low text-on-surface text-body-sm font-body-sm pl-9 pr-8 py-2 rounded-lg outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="input-master-search" placeholder="JANコード (490123...) または商品名入力..." type="text" value="国産牛肩ローススライス 250g"><button class="absolute right-2 top-2 text-outline hover:text-on-surface" id="btn-clear-search" type="button"><span class="material-symbols-outlined text-[18px]">close</span></button></div><!-- Selected Product Master Card --><div class="bg-surface-container-low p-2.5 rounded-xl border border-surface-container-high flex items-start gap-3 relative" id="selected-master-card"><img class="w-14 h-14 rounded-lg object-cover shrink-0 shadow-sm" data-alt="High quality package of thinly sliced Japanese domestic beef chuck roll on clean store tray with eco label" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGV0zqgcACHX85_zhPnewJ4REGVGv7DwVBCttzYjmF93TukoHSpzNBgQEjkSXy00WUG2-krvEZ8qE9z6_l494X7mr2hYC_M9GoibfGj8V4n3SLXir1saEeZavEGCSyAxV7cb9_qzqvML-xVhqNFiDBAaw6iyt-eyxetSH_1ICaEoR4RoTXKE3DTZmxfXRAD_WiIpU9GDQa3BIQjWtDMbSWDa6JPtzJyFb8uPEvh_8f"><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center justify-between gap-1"><span class="font-bold text-on-surface text-body-sm truncate">国産牛肩ローススライス 250g</span><span class="font-label-badge text-label-badge bg-primary text-on-primary px-1.5 py-0.2 rounded shrink-0">精肉</span></div><span class="font-label-caption text-label-caption text-outline font-label-numeric-md">JAN: 4901234567890</span><div class="flex items-center gap-2 mt-0.5"><span class="font-label-caption text-label-caption text-on-surface-variant">マスター標準価格: <strong class="text-on-surface">¥780</strong> (税込)</span></div></div></div><!-- Fallback: Master not found link to S02-B --><div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-surface-container-low border border-dashed border-outline-variant text-[11px] font-label-caption"><span class="text-on-surface-variant">登録のない新規商品ですか？</span><a class="text-primary hover:underline font-bold inline-flex items-center gap-0.5" href="#"><span class="material-symbols-outlined text-[14px]">add_circle</span>S02-B 商品新規登録へ進む</a></div><!-- Multi-lot Existing Alert --><div class="bg-secondary/10 border border-secondary/20 p-2.5 rounded-xl flex flex-col gap-1.5" id="multi-lot-summary"><div class="flex items-center justify-between"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">inventory_2</span><span class="font-bold text-on-surface text-[12px]">この商品には現在 2件 のロットが稼働中</span></div><span class="font-label-badge text-[10px] bg-secondary text-on-secondary px-1.5 py-0.2 rounded-full">複数ロット管理</span></div><div class="flex flex-col gap-1 text-[11px] font-label-caption text-on-surface-variant"><div class="flex items-center justify-between bg-surface-container-lowest px-2 py-1 rounded"><span class="font-label-numeric-md font-bold text-on-surface">ロット#1 (本日21:00)</span><span>残 <strong class="text-secondary font-bold">3パック</strong></span><span class="bg-secondary-fixed text-on-secondary-fixed font-bold px-1 rounded">30%引 (¥546)</span></div><div class="flex items-center justify-between bg-surface-container-lowest px-2 py-1 rounded"><span class="font-label-numeric-md font-bold text-on-surface">ロット#2 (明日12:00)</span><span>残 <strong class="text-primary font-bold">5パック</strong></span><span class="bg-primary/10 text-primary font-bold px-1 rounded">20%引 (¥624)</span></div></div></div><!-- Physical In-Store Stock Only (No reservation / No holds) --><div class="flex flex-col gap-1.5"><div class="flex items-center justify-between"><label class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider font-bold">店頭現品 在庫数量 (現物のみ)</label><span class="font-label-caption text-label-caption text-error font-bold">※取置・予約枠なし</span></div><div class="flex items-center justify-between bg-surface-container-low p-2 rounded-xl"><div class="flex items-center gap-2 pl-2"><span class="material-symbols-outlined text-[20px] text-primary">shelves</span><span class="font-body-sm text-body-sm text-on-surface font-bold">現品パック数:</span></div><div class="flex items-center gap-2"><button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container flex items-center justify-center font-bold text-[18px] shadow-sm transition-colors" id="btn-qty-minus" type="button">−</button><input class="w-14 text-center bg-transparent font-headline-md text-headline-md text-on-surface font-bold outline-none font-label-numeric-lg" id="input-stock-qty" type="number" value="4"><button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container flex items-center justify-center font-bold text-[18px] shadow-sm transition-colors" id="btn-qty-plus" type="button">+</button></div></div></div><!-- Expiry Date & Exact Time Pickers --><div class="grid grid-cols-2 gap-space-sm"><div class="flex flex-col gap-1.5"><label class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider font-bold">消費・賞味期限 日付</label><div class="relative"><span class="material-symbols-outlined absolute left-2.5 top-2.5 text-outline text-[18px]">calendar_today</span><input class="w-full bg-surface-container-low text-on-surface text-body-sm font-body-sm pl-8 pr-2 py-2 rounded-lg outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20" id="input-expiry-date" type="date" value="2025-05-10"></div></div><div class="flex flex-col gap-1.5"><label class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider font-bold">期限 時刻 (24H)</label><div class="relative"><span class="material-symbols-outlined absolute left-2.5 top-2.5 text-outline text-[18px]">schedule</span><input class="w-full bg-surface-container-low text-on-surface text-body-sm font-body-sm pl-8 pr-2 py-2 rounded-lg outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20" id="input-expiry-time" type="time" value="21:00"></div></div></div><!-- Base Price & Discount Setting --><div class="flex flex-col gap-1.5"><div class="flex items-center justify-between"><label class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider font-bold">通常価格 (マスター連動・編集可)</label><span class="text-[11px] font-label-caption text-outline">税込販売価格</span></div><div class="relative"><span class="absolute left-3 top-2 text-outline font-bold text-[14px]">¥</span><input class="w-full bg-surface-container-low text-on-surface text-body-sm font-body-sm pl-7 pr-3 py-2 rounded-lg outline-none focus:bg-surface-container-lowest font-label-numeric-md font-bold" id="input-base-price" type="number" value="780"></div></div><!-- Discount Pricing Method Switcher --><div class="flex flex-col gap-1.5"><label class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider font-bold">見切り価格・割引率設定</label><div class="grid grid-cols-2 gap-2 bg-surface-container-low p-1 rounded-xl"><button class="py-1.5 rounded-lg bg-surface-container-lowest text-primary font-bold text-body-sm shadow-sm transition-all text-center" id="tab-percent" type="button">割引率指定 (%)</button><button class="py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-medium text-body-sm transition-all text-center" id="tab-fixed" type="button">固定値引き額 (¥)</button></div><!-- Discount Preset Buttons --><div class="grid grid-cols-5 gap-1.5 mt-1" id="discount-button-group"><button class="py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed font-bold text-[12px] transition-colors" data-discount="10" type="button">10%</button><button class="py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed font-bold text-[12px] transition-colors" data-discount="20" type="button">20%</button><button class="py-1.5 rounded-lg bg-secondary text-on-secondary font-bold text-[12px] shadow-sm" data-discount="30" type="button">30%</button><button class="py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-secondary hover:text-on-secondary font-bold text-[12px] transition-colors" data-discount="50" type="button">半額(50%)</button><button class="py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-bold text-[11px] transition-colors" data-discount="fixed" type="button">定額引</button></div><!-- Calculated Preview Strip --><div class="mt-1 bg-surface-container-low p-2.5 rounded-xl flex items-center justify-between border border-surface-container-high"><div><span class="text-on-surface-variant text-[11px] font-label-caption block">改定後 店頭見切り販売価格</span><div class="flex items-baseline gap-2 mt-0.5"><span class="font-headline-lg text-headline-lg text-secondary font-bold font-label-numeric-lg" id="preview-discount-price">¥546</span><span class="text-outline text-body-sm line-through" id="preview-orig-price">¥780</span></div></div><div class="text-right"><span class="bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded-md font-bold text-[12px] font-label-numeric-md" id="preview-discount-badge">-¥234 (30%引)</span></div></div></div><!-- Shelf Location & Display Fixture --><div class="flex flex-col gap-1.5"><label class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider font-bold">売場位置・陳列什器</label><div class="relative"><span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">storefront</span><input class="w-full bg-surface-container-low text-on-surface text-body-sm font-body-sm pl-9 pr-3 py-2 rounded-lg outline-none focus:bg-surface-container-lowest" id="input-shelf-location" type="text" value="1F 精肉コーナー奥 冷ケース 見切り品ワゴン"></div><div class="flex items-center gap-1.5 mt-0.5 flex-wrap"><button class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface text-[11px] font-label-caption" onclick="document.getElementById('input-shelf-location').value='1F 精肉 奥ケース';" type="button">冷ケース</button><button class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface text-[11px] font-label-caption" onclick="document.getElementById('input-shelf-location').value='1F 精肉 特設見切りワゴン';" type="button">特設ワゴン</button><button class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface text-[11px] font-label-caption" onclick="document.getElementById('input-shelf-location').value='1F 精肉 エンド陳列棚';" type="button">エンド棚</button><button class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface text-[11px] font-label-caption" onclick="document.getElementById('input-shelf-location').value='1F 平台ワゴン';" type="button">平台ワゴン</button></div></div><!-- Lot Sales Status (Active / Paused / Sold Out) --><div class="flex flex-col gap-1.5"><label class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider font-bold">販売ステータス</label><div class="grid grid-cols-3 gap-1.5 bg-surface-container-low p-1 rounded-xl"><button class="py-1.5 rounded-lg bg-surface-container-lowest text-primary font-bold text-[12px] shadow-sm flex items-center justify-center gap-1" id="status-active-btn" type="button"><span class="w-2 h-2 rounded-full bg-primary"></span>販売中</button><button class="py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-medium text-[12px] flex items-center justify-center gap-1" id="status-pause-btn" type="button"><span class="w-2 h-2 rounded-full bg-outline"></span>一時停止</button><button class="py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-medium text-[12px] flex items-center justify-center gap-1" id="status-soldout-btn" type="button"><span class="w-2 h-2 rounded-full bg-error"></span>完売</button></div></div><!-- AI Recipe Integration & Food Waste Policy Toggle --><div class="flex flex-col gap-2 bg-primary/5 p-3 rounded-xl"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[20px]">psychology</span><span class="font-body-sm text-body-sm font-bold text-on-surface">AIレシピ・献立連動</span></div><label class="relative inline-flex items-center cursor-pointer"><input checked="" class="sr-only peer" type="checkbox"><div class="w-11 h-6 bg-surface-container rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div></label></div><p class="font-label-caption text-label-caption text-on-surface-variant">買い物客アプリの「今日の節約晩ごはんレシピ」に優先表示され、ついで買い調味料の売上を促進します。</p></div><!-- Status Simulation Controls (Error, Preview, Toast simulation) --><div class="p-2.5 rounded-xl bg-surface-container-low border border-surface-container-high flex flex-col gap-1.5"><div class="flex items-center justify-between"><span class="font-label-caption text-label-caption font-bold text-on-surface-variant uppercase tracking-wider">状態シミュレーションUI</span><span class="text-[10px] text-outline">動作検証</span></div><div class="flex items-center gap-1.5"><button class="flex-1 py-1 px-1.5 rounded bg-surface-container hover:bg-error-container hover:text-on-error-container text-on-surface-variant font-label-caption text-[11px] transition-colors" id="btn-sim-error" type="button">入力エラー</button><button class="flex-1 py-1 px-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-caption text-[11px] transition-colors" id="btn-sim-preview" type="button">確認プレビュー</button><button class="flex-1 py-1 px-1.5 rounded bg-surface-container hover:bg-primary/20 text-on-surface-variant font-label-caption text-[11px] transition-colors" id="btn-sim-toast" type="button">保存完了</button></div><!-- Inline Error Alert Container (Simulated) --><div class="hidden bg-error-container text-on-error-container p-2 rounded-lg text-[11px] font-label-caption flex items-start gap-1.5" id="sim-error-alert"><span class="material-symbols-outlined text-[16px] text-error shrink-0">error</span><div><strong class="block font-bold">入力内容をご確認ください</strong><span>消費期限が過去時刻または在庫数量が0個に設定されています。</span></div></div><!-- Inline Confirmation Preview Modal/Drawer (Simulated) --><div class="hidden bg-surface-container-lowest p-2.5 rounded-lg border border-primary/30 text-[11px] font-label-caption flex flex-col gap-1 shadow-sm" id="sim-preview-box"><div class="flex items-center justify-between border-b pb-1"><span class="font-bold text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">visibility</span>登録内容プレビュー</span><span class="text-[10px] text-outline">即時同期対象</span></div><div class="grid grid-cols-2 gap-1 text-on-surface mt-0.5"><span>品名: 国産牛肩ロース</span><span>数量: 4パック (店頭現品)</span><span>販売価格: ¥546 (30%引)</span><span>期限: 本日 21:00</span></div></div><!-- Toast Notification Banner --><div class="hidden bg-tertiary text-on-tertiary p-2 rounded-lg text-[11px] font-label-caption flex items-center justify-between shadow-md transition-all" id="sim-toast-box"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">check_circle</span><span>ロット情報を保存し、店頭・アプリへ即時反映しました</span></div><button class="text-on-tertiary hover:opacity-80" onclick="this.parentElement.classList.add('hidden')" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button></div></div><!-- Primary Action Buttons --><div class="flex flex-col gap-2 pt-1"><button class="w-full bg-primary hover:bg-primary-container text-on-primary py-3 rounded-xl font-body-sm text-body-sm font-bold shadow-md shadow-primary/20 flex items-center justify-center gap-2 transition-all" id="btn-submit-lot" type="button"><span class="material-symbols-outlined text-[20px]">save</span><span>ロット情報を店頭へ即時反映</span></button><div class="flex items-center gap-2"><button class="flex-1 bg-surface-container hover:bg-surface-container-high text-on-surface py-2.5 rounded-xl font-body-sm text-body-sm font-medium flex items-center justify-center gap-1.5 transition-colors" id="btn-print-label" type="button"><span class="material-symbols-outlined text-[18px]">print</span><span>見切りシール印刷</span></button><button class="px-4 py-2.5 rounded-xl bg-error-container text-on-error-container hover:bg-error hover:text-on-error font-body-sm text-body-sm font-bold flex items-center justify-center transition-colors" id="btn-complete-lot" title="売り切りとしてロット完了" type="button"><span>販売完了</span></button></div></div></div></div></div>
+<!-- Quick Shelf Operation Tip Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[24px] shrink-0 mt-0.5">lightbulb</span>
+<div>
+<span class="font-bold text-on-surface text-body-sm block">現場オペレーションのポイント</span>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-1 leading-relaxed">
+            見切りシールを貼付した直後に本画面で在庫数を更新すると、半径2km圏内のアプリ利用者に即座に通知されます。実店舗での過剰な滞留を防ぐため、売り切れた際は「販売完了」を速やかに押してください。
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Enhancement -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Highlight filter tabs on click
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary', 'font-bold');
+            b.classList.add('bg-surface-container-lowest', 'text-on-surface');
+          });
+          btn.classList.add('bg-primary', 'text-on-primary', 'font-bold');
+          btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+        });
+      });
+
+      // Quick row click simulator for drawer editing
+      const editTriggers = document.querySelectorAll('.edit-lot-trigger');
+      const formTitle = document.getElementById('form-panel-title');
+      editTriggers.forEach((trigger, idx) => {
+        trigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const targetRow = trigger.closest('tr');
+          const lotId = targetRow.querySelector('.font-label-numeric-md').textContent;
+          if (formTitle) {
+            formTitle.textContent = 'ロット編集 (' + lotId + ')';
+          }
+          const formCard = document.getElementById('lot-form-card');
+          formCard.classList.add('ring-2', 'ring-primary');
+          setTimeout(() => {
+            formCard.classList.remove('ring-2', 'ring-primary');
+          }, 800);
+        });
+      });
+
+      // Discount Method Tabs
+      const tabPercent = document.getElementById('tab-percent');
+      const tabFixed = document.getElementById('tab-fixed');
+      if (tabPercent && tabFixed) {
+        tabPercent.addEventListener('click', () => {
+          tabPercent.classList.add('bg-surface-container-lowest', 'text-primary', 'font-bold', 'shadow-sm');
+          tabPercent.classList.remove('text-on-surface-variant');
+          tabFixed.classList.remove('bg-surface-container-lowest', 'text-primary', 'font-bold', 'shadow-sm');
+          tabFixed.classList.add('text-on-surface-variant');
+        });
+        tabFixed.addEventListener('click', () => {
+          tabFixed.classList.add('bg-surface-container-lowest', 'text-primary', 'font-bold', 'shadow-sm');
+          tabFixed.classList.remove('text-on-surface-variant');
+          tabPercent.classList.remove('bg-surface-container-lowest', 'text-primary', 'font-bold', 'shadow-sm');
+          tabPercent.classList.add('text-on-surface-variant');
+        });
+      }
+
+      // New Lot Button
+      const openNewLotBtn = document.getElementById('open-new-lot-btn');
+      if (openNewLotBtn && formTitle) {
+        openNewLotBtn.addEventListener('click', () => {
+          formTitle.textContent = '新規ロット登録（見切り品）';
+          const formCard = document.getElementById('lot-form-card');
+          formCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+      }
+    });
+  </script>
+</div></main></div>
+
+</body></html>
